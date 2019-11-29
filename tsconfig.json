@@ -1,0 +1,19 @@
+// https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+{
+  "extends": "@minna-ui/ts-config",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "importHelpers": true,
+    "isolatedModules": true, // Ensure compatibility with sucrase
+    "noEmit": true,
+    "paths": {
+      "*": ["*", "types/*"],
+      "##/*": ["src/*"] // Rollup/PostCSS alias
+    },
+    "target": "esnext"
+  },
+  "exclude": ["**/__sapper__/*", "test/coverage"]
+}

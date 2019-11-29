@@ -1,0 +1,6 @@
+/**
+ * Import this file into components for access to variables and mixins.
+ */
+
+@import 'minna-ui/import.css'; /* package */
+@import './_variables.css';

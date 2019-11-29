@@ -1,0 +1,8 @@
+node_modules
+/__sapper__/
+/dist/
+/test/coverage/
+package-lock.json*
+yarn-error.log
+*.bak
+*.PRIVATE.*

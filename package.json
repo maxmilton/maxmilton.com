@@ -1,0 +1,109 @@
+{
+  "name": "maxmilton.com",
+  "version": "4.0.0",
+  "private": true,
+  "description": "My personal blog",
+  "license": "MIT",
+  "repository": "https://github.com/MaxMilton/MaxMilton.com",
+  "author": "Max Milton <max@wearegenki.com>",
+  "scripts": {
+    "_run": "yarn export && sirv __sapper__/export --dev --single --cors",
+    "build": "NODE_ENV=production sapper build",
+    "dev": "NODE_ENV=development sapper dev",
+    "export": "NODE_ENV=production sapper export",
+    "lint": "yarn lint:md && yarn lint:css && yarn lint:js && yarn lint:types",
+    "lint:css": "stylelint **/*.{css,html,js,md,svelte,svg,ts} --report-needless-disables",
+    "lint:js": "eslint --ext html,js,md,mjs,svelte,svg,ts .",
+    "lint:md": "remark --frail --quiet .",
+    "lint:types": "tsc --noEmit --allowJs --checkJs",
+    "test": "jest --notify --watch",
+    "test-ci": "jest --coverage --ci"
+  },
+  "dependencies": {
+    "ganalytics": "3.1.2",
+    "polka": "1.0.0-next.9",
+    "sirv": "1.0.0-next.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-replace": "2.2.1",
+    "@types/express": "4.17.2",
+    "@wearegenki/renovate-config": "1.0.0",
+    "eslint": "6.7.1",
+    "jest": "25.0.0",
+    "minna-tools": "0.35.1",
+    "minna-ui": "0.35.0",
+    "oniguruma": "7.2.1",
+    "postcss": "7.0.23",
+    "postcss-extend-rule": "3.0.0",
+    "postcss-scss": "2.0.0",
+    "prettier": "1.19.1",
+    "remark": "11.0.2",
+    "remark-cli": "7.0.1",
+    "rollup": "1.27.5",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-sucrase": "2.1.0",
+    "rollup-plugin-svelte": "5.1.1",
+    "rollup-plugin-terser": "5.1.2",
+    "rollup-plugin-typescript": "1.0.1",
+    "sapper": "0.27.9",
+    "shiki": "0.1.6",
+    "sirv-cli": "1.0.0-next.2",
+    "stylelint": "12.0.0",
+    "svelte": "3.15.0",
+    "tslib": "1.10.0",
+    "typescript": "3.7.2"
+  },
+  "browserslist": {
+    "production": [
+      "extends @minna-ui/browserslist-config"
+    ],
+    "development": [
+      "extends @minna-ui/browserslist-config/dev"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./node_modules/minna-tools/eslint.js"
+    ]
+  },
+  "eslintIgnore": [
+    "**/node_modules/**",
+    "__sapper__/**",
+    "test/coverage/**"
+  ],
+  "jest": {
+    "preset": "minna-tools",
+    "collectCoverageFrom": [
+      "src/**/*.{html,js,svelte,ts}"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "minna-ui/postcss": {
+        "unsafe": true
+      }
+    },
+    "syntax": "postcss-scss"
+  },
+  "prettier": "minna-tools/prettier",
+  "remarkConfig": {
+    "plugins": [
+      "minna-tools/remark"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "@wearegenki"
+    ]
+  },
+  "stylelint": {
+    "extends": "minna-tools/stylelint",
+    "ignoreFiles": [
+      "**/node_modules/**",
+      "__sapper__/**",
+      "test/coverage/**"
+    ]
+  }
+}

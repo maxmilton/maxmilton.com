@@ -1,0 +1,26 @@
+/**
+ * App Variables
+ */
+
+/* Colours */
+
+/*
+$brand-light: hsl(0, 0%, 98%);
+$brand-dark: hsl(221, 100%, 11%);
+$brand-primary: hsl(212, 97%, 38%);
+
+$app-background-color: $brand-light;
+$intent-primary: $brand-primary;
+$text-color: $brand-dark;
+$link-color: $brand-primary;
+*/
+
+/* Typography */
+
+$use-enhanced-type: true;
+$text-size-large: 1.3125em; /* 21px */
+
+/* Order */
+
+$skip-zindex: 9999;
+$loading-zindex: 9;
