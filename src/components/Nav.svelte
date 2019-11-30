@@ -2,59 +2,39 @@
   export let segment;
 </script>
 
-<style>
+<style type="text/postcss">
+  @import 'import.css';
+
   nav {
+    padding: 0.3em 1em;
+    /* FIXME: Replace with var (?) */
     border-bottom: 1px solid rgba(255, 62, 0, 0.1);
-    font-weight: 300;
-    padding: 0 1em;
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* clearfix */
-  ul::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-
-  li {
-    display: block;
-    float: left;
-  }
-
-  .selected {
-    position: relative;
-    display: inline-block;
-  }
-
-  .selected::after {
-    position: absolute;
-    content: '';
-    width: calc(100% - 1em);
-    height: 2px;
-    background-color: rgb(255, 62, 0);
-    display: block;
-    bottom: -1px;
-  }
-
-  a {
+  /* stylelint-disable-next-line selector-max-id */
+  #logo {
+    color: $text-color;
+    font-size: $logo-text-size;
     text-decoration: none;
-    padding: 1em 0.5em;
-    display: block;
+  }
+
+  .nav-item {
+    padding: 0.65em 1em;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-bottom-color: $intent-primary;
+    }
   }
 </style>
 
-<nav>
-  <ul>
-    <li><a class:selected='{segment === undefined}' href='.'>home</a></li>
-    <li><a class:selected='{segment === "about"}' href='about'>about</a></li>
-
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-         the blog data when we hover over the link or tap it on a touchscreen -->
-    <li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
-  </ul>
+<nav class="dfc">
+  <a id="logo" href="/" class="mr3">Max Milton</a>
+  <a class="nav-item {segment === undefined ? 'active' : ''}" href=".">Home</a>
+  <a class="nav-item {segment === 'about' ? 'active' : ''}" href="about">About</a>
+  <a rel=prefetch class="nav-item {segment === 'blog' ? 'active' : ''}" href="blog">Blog</a>
 </nav>

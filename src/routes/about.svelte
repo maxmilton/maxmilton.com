@@ -4,7 +4,62 @@
 </svelte:head>
 
 <div class="con">
-  <h1>About this site</h1>
+  <h1>About Max Milton</h1>
 
-  <p>This is the 'about' page. There's not much here.</p>
+  <blockquote class="blockquote-plain bg-primary text-white">
+    &ldquo;Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.&rdquo;
+    <footer class="blockquote-footer blockquote-plain-footer">Paul J. Meyer</footer>
+  </blockquote>
+
+  <p>Yo ✌</p>
+  <p>I'm Max. I'm a tech consultant currently based in Sydney, Australia. I'm always up for new experiences, love learning new things, my world is full of adventure and crazy fun times!</p>
+  <p>I specialise in Ecommerce, DevOps, Linux, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too. To hire me for a project or consulting [contact me](#contact-me).</p>
+  <p>I also run a number of ecommerce properties via my company <a href="https://wearegenki.com" target="_blank">We Are Genki</a>. These sites are a great example of the quality of my work.</p>
+
+  <h2>Find me on GitHub</h2>
+
+  <ul>
+    <li><a href="https://github.com/MaxMilton">https://github.com/MaxMilton</a></li>
+    <li><a href="https://github.com/WeAreGenki">https://github.com/WeAreGenki</a></li>
+  </ul>
+
+  <h2>Did you know...?</h2>
+
+  <ul>
+    <li>I love working as a consultant --- the fast pace and ever-changing landscape mean I'm constantly learning new and better ways of doing things. I blog about many of these learnings here!</li>
+    <li>I've been using Linux as my main OS for more than 10 years --- both on my web servers and my desktop workstations. I love it!</li>
+    <li>I've lived in 10+ cities since moving out as a teen.</li>
+    <li>When I move to a new city I make friends by going to tech and business meetups.</li>
+    <li>I eat a <a href="blog/intro-to-the-keto-diet-and-14-day-keto-meal-plan">diet consisting mostly of fat</a>.</li>
+  </ul>
+
+  <h2>Contact me</h2>
+
+  <div class="row">
+    <form class="col" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_blank">
+      <fieldset class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="entry.662797564" placeholder="Name">
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="entry.1672368430" placeholder="Enter email">
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="entry.1191009931" rows="4"></textarea>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Send your message</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <p>Alternatively, send an email to <a href="mailto:max@wearegenki.com">max@wearegenki.com</a>.</p>
+
+  <hr>
+
+  <h2>Copyright</h2>
+
+  <p>Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (<a href="https://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a>) licence. When quoting my posts, please link back to the original article.</p>
 </div>

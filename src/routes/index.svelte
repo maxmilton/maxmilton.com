@@ -1,6 +1,6 @@
 <svelte:head>
-  <title>Sapper project template</title>
-  <meta name="description" content="FIXME:INDEX" />
+  <title>MaxMilton.com</title>
+  <meta name="description" content="MaxMilton.com" />
 </svelte:head>
 
 <div class="con">
