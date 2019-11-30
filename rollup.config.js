@@ -1,19 +1,41 @@
-import resolve from 'rollup-plugin-node-resolve';
+/* eslint-disable @typescript-eslint/no-require-imports, global-require */
+
+// @ts-ignore - no included types
+import alias from '@rollup/plugin-alias';
 import replace from '@rollup/plugin-replace';
+import { gitDescribe, postcss, purgecss } from 'minna-tools';
+import { preprocess } from 'minna-ui';
+import path from 'path';
 import commonjs from 'rollup-plugin-commonjs';
+import resolve from 'rollup-plugin-node-resolve';
+// @ts-ignore - no included types
 import svelte from 'rollup-plugin-svelte';
 import { terser } from 'rollup-plugin-terser';
+// @ts-ignore - no included types
 import typescript from 'rollup-plugin-typescript';
+// @ts-ignore - no included types
 import config from 'sapper/config/rollup.js';
-import { preprocess } from 'minna-ui';
-import { gitDescribe, postcss, purgecss } from 'minna-tools';
-import { join } from 'path';
+import json from '@rollup/plugin-json';
 import pkg from './package.json';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
+const rootDir = path.resolve(__dirname);
 const release = gitDescribe();
+const dependencies = [
+  ...Object.keys(pkg.dependencies),
+  ...Object.keys(pkg.devDependencies),
+];
 
+const aliasOpts = {
+  entries: [
+    {
+      find: /^##\/(.*)/,
+      replacement: path.join(rootDir, 'src', '$1'),
+    },
+  ],
+  resolve: ['.mjs', '.js', '.ts', '.svelte', '.json', '.md'],
+};
 const purgecssOpts = {
   content: [
     // XXX: Using `__sapper__/*` requires 2 builds
@@ -22,24 +44,41 @@ const purgecssOpts = {
   ],
   // debug: true, // see purged names
 };
+const tsOpts = {
+  exclude: /\.css$/,
+  tsconfig: path.join(rootDir, 'tsconfig.build.json'),
+  typescript: require('typescript'),
+};
 
-const onwarn = (warning, onwarn) =>
+// @ts-ignore
+const onwarn = (warning, _onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
-    /[/\\]@sapper[/\\]/.test(warning.message)) ||
-  onwarn(warning);
-const dedupe = (importee) =>
-  importee === 'svelte' || importee.startsWith('svelte/');
+    /[/\\](@sapper|mdast-util-to-hast|hast-util-to-html)[/\\]/.test(
+      warning.message,
+    )) ||
+  _onwarn(warning);
+
+// @ts-ignore
+function dedupe(importee) {
+  return dependencies.some(
+    (dep) => importee === dep || importee.startsWith(`${dep}/`),
+  );
+}
 
 export default {
   client: {
     input: config.client.input().replace(/\.js$/, '.ts'),
+    onwarn,
     output: config.client.output(),
     plugins: [
+      // @ts-ignore
       replace({
         'process.browser': true,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
+      alias(aliasOpts),
+      json(),
       postcss(),
       svelte({
         dev,
@@ -54,64 +93,25 @@ export default {
         dedupe,
       }),
       commonjs(),
-      typescript({
-        exclude: /\.css$/,
-        tsconfig: join(__dirname, 'tsconfig.build.json'),
-        typescript: require('typescript'),
-      }),
-      !dev &&
-        terser({
-          module: true,
-        }),
-      // !dev &&
-      //   terser({
-      //     compress: {
-      //       booleans: true,
-      //       collapse_vars: true,
-      //       comparisons: true,
-      //       conditionals: true,
-      //       dead_code: true,
-      //       drop_console: false,
-      //       drop_debugger: true,
-      //       evaluate: true,
-      //       // hoist_funs: true, // broken; shouldn't hoist above imports
-      //       if_return: true,
-      //       join_vars: true,
-      //       keep_fargs: false,
-      //       loops: true,
-      //       negate_iife: false,
-      //       passes: 4,
-      //       properties: true,
-      //       pure_funcs: ['Object.freeze'],
-      //       pure_getters: true,
-      //       sequences: true,
-      //       side_effects: true,
-      //       unused: true,
-      //     },
-      //     ecma: legacy ? 5 : 8,
-      //     mangle: true,
-      //     module: true,
-      //     output: {
-      //       comments: /[@#]__PURE__/,
-      //       wrap_iife: true,
-      //     },
-      //     sourcemap: true,
-      //     warnings: true,
-      //   }),
+      typescript(tsOpts),
+      !dev && terser({ module: true }),
     ],
-    onwarn,
   },
 
   server: {
     // input: config.server.input(),
     input: { server: config.server.input().server.replace(/\.js$/, '.ts') },
+    onwarn,
     output: config.server.output(),
     plugins: [
+      // @ts-ignore
       replace({
         'process.browser': false,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
+      alias(aliasOpts),
+      json(),
       postcss(),
       svelte({
         dev,
@@ -122,37 +122,29 @@ export default {
       !dev && purgecss(purgecssOpts),
       resolve({ dedupe }),
       commonjs(),
-      typescript({
-        exclude: /\.css$/,
-        tsconfig: join(__dirname, 'tsconfig.build.json'),
-        typescript: require('typescript'),
-      }),
+      typescript(tsOpts),
     ],
     external: Object.keys(pkg.dependencies).concat(
-      require('module').builtinModules ||
-        Object.keys(process.binding('natives')),
+      'rehype-shiki',
+      require('module').builtinModules,
     ),
-    onwarn,
   },
 
   serviceworker: {
     input: config.serviceworker.input().replace(/\.js$/, '.ts'),
+    onwarn,
     output: config.serviceworker.output(),
     plugins: [
       resolve(),
+      // @ts-ignore
       replace({
         'process.browser': true,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       commonjs(),
-      typescript({
-        exclude: /\.css$/,
-        tsconfig: join(__dirname, 'tsconfig.build.json'),
-        typescript: require('typescript'),
-      }),
+      typescript(tsOpts),
       !dev && terser(),
     ],
-    onwarn,
   },
 };
