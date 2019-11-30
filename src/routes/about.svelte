@@ -1,26 +1,30 @@
 <svelte:head>
-  <title>About</title>
-  <meta name="description" content="FIXME:ABOUT" />
+  <title>About Max Milton</title>
+  <meta name="description" content="About Max." />
 </svelte:head>
 
 <div class="con">
   <h1>About Max Milton</h1>
 
-  <blockquote class="blockquote-plain bg-primary text-white">
-    &ldquo;Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.&rdquo;
-    <footer class="blockquote-footer blockquote-plain-footer">Paul J. Meyer</footer>
+  <blockquote>
+    <p>&ldquo;Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.&rdquo;</p>
+    <footer class="blockquote-footer">Paul J. Meyer</footer>
   </blockquote>
 
   <p>Yo ✌</p>
+  <p>I'm Max and this is my personal blog. Welcome.</p>
+
+  <p>// // // // // // // // // // // //</p>
+
   <p>I'm Max. I'm a tech consultant currently based in Sydney, Australia. I'm always up for new experiences, love learning new things, my world is full of adventure and crazy fun times!</p>
-  <p>I specialise in Ecommerce, DevOps, Linux, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too. To hire me for a project or consulting [contact me](#contact-me).</p>
-  <p>I also run a number of ecommerce properties via my company <a href="https://wearegenki.com" target="_blank">We Are Genki</a>. These sites are a great example of the quality of my work.</p>
+  <p>I specialise in Ecommerce, DevOps, Linux, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too. To hire me for a project or consulting <a href="about#contact-max">contact me</a>.</p>
+  <p>I also run a number of ecommerce properties via my company <a href="https://wearegenki.com">We Are Genki</a>. These sites are a great example of the quality of my work.</p>
 
   <h2>Find me on GitHub</h2>
 
   <ul>
-    <li><a href="https://github.com/MaxMilton">https://github.com/MaxMilton</a></li>
-    <li><a href="https://github.com/WeAreGenki">https://github.com/WeAreGenki</a></li>
+    <li><a href="https://github.com/MaxMilton" target="_blank">github.com/MaxMilton</a></li>
+    <li><a href="https://github.com/WeAreGenki" target="_blank">github.com/WeAreGenki</a></li>
   </ul>
 
   <h2>Did you know...?</h2>
@@ -33,27 +37,43 @@
     <li>I eat a <a href="blog/intro-to-the-keto-diet-and-14-day-keto-meal-plan">diet consisting mostly of fat</a>.</li>
   </ul>
 
-  <h2>Contact me</h2>
-
-  <div class="row">
-    <form class="col" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_blank">
-      <fieldset class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="entry.662797564" placeholder="Name">
-      </fieldset>
-      <fieldset class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" name="entry.1672368430" placeholder="Enter email">
-      </fieldset>
-      <fieldset class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" name="entry.1191009931" rows="4"></textarea>
-      </fieldset>
-      <button type="submit" class="btn btn-primary">Send your message</button>
-    </form>
-  </div>
-
   <hr>
+
+  <h2 id="contact-max">Contact Max</h2>
+
+  <form action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_blank">
+    <div class="form-group">
+      <label class="label" for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        class="input"
+        name="entry.662797564"
+        autocomplete="name"
+        placeholder="Elon Musk"
+      >
+    </div>
+    <div class="form-group">
+      <label class="label" for="email">Email address</label>
+      <input
+        id="email"
+        type="email"
+        class="input"
+        name="entry.1672368430"
+        autocomplete="email"
+        placeholder="elon@spacex.com"
+      >
+    </div>
+    <div class="form-group">
+      <label class="label" for="message">Message</label>
+      <textarea
+        id="message"
+        class="textarea w100"
+        name="entry.1191009931"
+      />
+    </div>
+    <button type="submit" class="button">Send your message</button>
+  </form>
 
   <p>Alternatively, send an email to <a href="mailto:max@wearegenki.com">max@wearegenki.com</a>.</p>
 
@@ -61,5 +81,5 @@
 
   <h2>Copyright</h2>
 
-  <p>Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (<a href="https://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a>) licence. When quoting my posts, please link back to the original article.</p>
+  <p>All blog posts are licensed under the Creative Commons Attribution 4.0 International (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>) licence. Want to share a post? You're welcome to, however, please link back to the original article.</p>
 </div>
