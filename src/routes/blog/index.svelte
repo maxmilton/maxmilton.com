@@ -1,12 +1,12 @@
 <script context="module">
-	export async function preload() {
-		const posts = await this.fetch(`blog.json`).then(r => r.json());
-		return { posts };
-	}
+  export async function preload() {
+    const posts = await this.fetch(`blog.json`).then((r) => r.json());
+    return { posts };
+  }
 </script>
 
 <script>
-	export let posts;
+  export let posts;
 </script>
 
 <svelte:head>
@@ -15,15 +15,15 @@
   <link rel="alternate" type="application/rss+xml" title="Max Milton's blog" href="blog/rss.xml">
 </svelte:head>
 
-<div class='con'>
+<div class="con">
   <h1>Recent Posts</h1>
 
-	{#each posts as post}
-		<article class='post' data-pubdate={post.metadata.dateString}>
-			<a class="no-underline" rel='prefetch' href='blog/{post.slug}' title='Read the article »'>
-				<h2>{post.metadata.title}</h2>
-				<p>{post.metadata.description}</p>
-			</a>
-		</article>
-	{/each}
+  {#each posts as post}
+    <article class="post" data-pubdate={post.metadata.dateString}>
+      <a class="no-underline" rel="prefetch" href="blog/{post.slug}" title="Read the article »">
+        <h2>{post.metadata.title}</h2>
+        <p>{post.metadata.description}</p>
+      </a>
+    </article>
+  {/each}
 </div>

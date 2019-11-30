@@ -26,6 +26,12 @@
   });
 </script>
 
+<style>
+  .big {
+    font-size: 2em;
+  }
+</style>
+
 <svelte:window on:error="{sendError}" on:unhandledrejection="{sendError}" />
 
 <Nav segment="{segment}" />
@@ -35,5 +41,5 @@
 </main>
 
 <footer class="footer muted tc">
-  <a href="mailto:max@wearegenki.com" class="footer-link inherit" title="Contact us">max@wearegenki.com</a>
+  <a href="mailto:max@wearegenki.com" class="footer-link inherit big" title="Contact Max">&#129492;</a>
 </footer>
