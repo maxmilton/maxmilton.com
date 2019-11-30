@@ -7,7 +7,7 @@ tags:
   - nutrition
 ---
 
-To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a blood glucose conversion calculator and chart. If you're not sure what mmol/L or mg/dL mean, see [unit of measurement](#unit-of-measurement) below<!--more-->.
+To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a blood glucose conversion calculator and chart. If you're not sure what mmol/L or mg/dL mean, see [unit of measurement](#unit-of-measurement) below.
 
 ---
 

@@ -8,7 +8,7 @@ tags:
   - quick tips
 ---
 
-Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time, I'll post insights I find thought provoking too. Here's a simple example<!--more-->:
+Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time, I'll post insights I find thought provoking too. Here's a simple example:
 
 ## Number of characters in a string
 

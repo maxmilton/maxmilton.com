@@ -9,7 +9,7 @@ tags:
 
 {{< img src="/img/simple-keto-meal-plan" type="jpg" alt="simple keto diet meal" >}}
 
-Since I was writing a keto diet induction plan for myself anyway, I thought why not put in a little more effort and publish it for other people's benefit too! What you'll find bellow are my notes on becoming keto-adapted and a sample 14 day keto-induction meal plan<!--more-->.
+Since I was writing a keto diet induction plan for myself anyway, I thought why not put in a little more effort and publish it for other people's benefit too! What you'll find bellow are my notes on becoming keto-adapted and a sample 14 day keto-induction meal plan.
 
 More than likely you've either never heard of the keto diet or you've already well-read into what it's all about. **The ketogenic diet is a high-fat, adequate protein, and low-carbohydrate diet**. You swap out the carbs in your diet with a higher portion of fat and a moderate protein intake.
 
