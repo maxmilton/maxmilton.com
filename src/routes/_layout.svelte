@@ -28,6 +28,7 @@
 
 <style>
   .big {
+    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
     font-size: 2em;
   }
 </style>
@@ -40,6 +41,6 @@
   <slot></slot>
 </main>
 
-<footer class="footer muted tc">
-  <a href="mailto:max@wearegenki.com" class="footer-link inherit big" title="Contact Max">&#129492;</a>
+<footer class="footer tc">
+  <a href="mailto:max@wearegenki.com" class="big" title="Contact Max">&#129492;</a>
 </footer>
