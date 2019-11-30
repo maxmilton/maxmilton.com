@@ -1,30 +1,25 @@
-import posts from './_posts';
+import send from '@polka/send';
+import { PostItem, Req, Res } from '##/types';
+import getPosts from './_posts';
 
-const lookup = new Map();
-posts.forEach((post) => {
-  lookup.set(post.slug, JSON.stringify(post));
-});
+const TIME_FIVE_MINUTES = 5 * 60 * 1e3;
+let lookup: Map<string, PostItem>;
 
-export function get(req, res, next) {
-  // the `slug` parameter is available because
-  // this file is called [slug].json.js
-  const { slug } = req.params;
-
-  if (lookup.has(slug)) {
-    res.writeHead(200, {
-      'Content-Type': 'application/json',
+export async function get(req: Req, res: Res): Promise<void> {
+  if (!lookup || process.env.NODE_ENV !== 'production') {
+    lookup = new Map();
+    const posts = await getPosts();
+    posts.forEach((post) => {
+      lookup.set(post.slug, post);
     });
+  }
 
-    res.end(lookup.get(slug));
+  const post = lookup.get(req.params.slug);
+
+  if (post) {
+    res.setHeader('Cache-Control', `max-age=${TIME_FIVE_MINUTES}`);
+    send(res, 200, post);
   } else {
-    res.writeHead(404, {
-      'Content-Type': 'application/json',
-    });
-
-    res.end(
-      JSON.stringify({
-        message: 'Not found',
-      }),
-    );
+    send(res, 404, { message: 'not found' });
   }
 }

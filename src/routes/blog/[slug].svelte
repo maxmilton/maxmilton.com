@@ -1,15 +1,7 @@
-
 <script context="module">
-  export async function preload({ params, query }) {
-    // the `slug` parameter is available because
-    // this file is called [slug].svelte
+  export async function preload({ params }) {
     const res = await this.fetch(`blog/${params.slug}.json`);
-    const data = await res.json();
-    if (res.status === 200) {
-      return { post: data };
-    } else {
-      this.error(res.status, data.message);
-    }
+    return res.ok ? { post: await res.json() } : this.error(404, 'Not found');
   }
 </script>
 
@@ -18,11 +10,14 @@
 </script>
 
 <svelte:head>
-  <title>{post.title}</title>
+  <title>{post.metadata.title}</title>
+  <meta name="description" content="{post.metadata.description}" />
 </svelte:head>
 
-<h1>{post.title}</h1>
+<article class="con">
+  <h1 id="{post.slug}">{post.metadata.title}</h1>
+  <div>{post.metadata.description}</div>
+  <div><a href="{post.metadata.authorURL}">{post.metadata.author}</a> <time datetime="{post.metadata.pubdate}">{post.metadata.dateString}</time></div>
 
-<div class='content'>
   {@html post.html}
-</div>
+</article>

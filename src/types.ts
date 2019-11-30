@@ -14,3 +14,9 @@ export interface Req extends IncomingMessage {
 export interface Res extends ServerResponse {}
 
 export type Next = () => void;
+
+export interface PostItem {
+  html: string;
+  metadata: Record<string, string>;
+  slug: string;
+}
