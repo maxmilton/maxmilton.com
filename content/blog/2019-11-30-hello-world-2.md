@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Hello World 2
 description: You can't write serious applications in vanilla JavaScript without hitting a complexity wall. But a compiler can do it for you.
 author: Max Milton
 authorURL: https://maxmilton.com
@@ -12,11 +12,42 @@ authorURL: https://maxmilton.com
 ```ts
 import { Collapse } from 'minna-ui';
 
-const vm = new Collapse();
+const target = document.createElement('div');
+const vm: string = new Collapse({ target });
 
 // comment
 
-console.log('mmm hmm');
+console.log('mmm hmm', [vm]);
+```
+
+```json
+{
+  "dependencies": {
+    "minna-ui": "0.35.0",
+    "svelte": "3.15.0"
+  },
+  "devDependencies": {
+    "minna-tools": "0.35.1",
+    "sapper": "0.27.9",
+    "typescript": "3.7.2"
+  }
+}
+```
+
+```scss
+/* Colours */
+
+$intent-primary: rgb(0, 112, 243);
+$link-color: $intent-primary;
+
+/* Typography */
+
+$use-enhanced-type: true;
+$text-color: $dark5;
+
+/* Nav */
+
+$logo-text-size: 1.3em;
 ```
 
 But I was wrong. 100kb of .js isn't equivalent to 100kb of .jpg. It's not just the network time that'll kill your app's startup performance, but the time spent parsing and evaluating your script, during which time the browser becomes completely unresponsive. On mobile, those milliseconds rack up very quickly.
