@@ -38,26 +38,24 @@ export default async function getPosts(): Promise<PostItem[]> {
       const processor = unified()
         .use(parse)
         .use(frontmatter)
-        .use(remark2rehype)
+        .use(remark2rehype, { allowDangerousHTML: true })
         .use(raw)
         .use(_slug)
         .use(shiki, { theme: 'zeit', useBackground: true })
-        .use(stringify, {
-          allowDangerousHTML: true,
-        });
+        .use(stringify, { allowDangerousHTML: true });
 
       const ast = processor.parse(vfile.readSync(`content/blog/${file}`));
       const metadata =
-        ast.children ?? ast.children[0]?.type === 'yaml'
+        ast.children && ast.children[0]?.type === 'yaml'
           ? yaml.safeLoad(ast.children[0].value)
           : {};
       const result = await processor.run(ast);
       const html = processor.stringify(result);
 
       const [, pubdate, slug] = match;
-      const date = new Date(`${pubdate} EDT`); // cheeky hack
+      const date = new Date(`${pubdate} UTC`);
       metadata.pubdate = pubdate;
-      metadata.dateString = date.toDateString();
+      metadata.dateString = date.toLocaleDateString('ja-JP');
 
       // eslint-disable-next-line consistent-return
       return {
