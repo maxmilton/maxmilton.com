@@ -6,6 +6,7 @@ a,
   font-weight: 500;
 }
 
+/*
 .button-dark {
   @include button($brand-dark, $dark4, $dark1);
 }
@@ -16,4 +17,12 @@ a,
 
 .button-action {
   @include button($intent-success, $green5, $green4);
+}
+ */
+
+/* Code */
+
+pre {
+  padding: 0.65em 1em;
+  border-radius: $radius;
 }
