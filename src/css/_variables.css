@@ -2,10 +2,16 @@
  * App Variables
  */
 
-/* FIXME: Remove this section once the new colours are in minna-ui master */
-$dark5: rgb(0, 0, 0);
+/* Colours */
+
+$intent-primary: rgb(0, 112, 243);
+$link-color: $intent-primary;
 
 /* Typography */
 
 $use-enhanced-type: true;
 $text-color: $dark5;
+
+/* Nav */
+
+$logo-text-size: 1.3em;

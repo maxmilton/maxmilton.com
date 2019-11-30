@@ -1,7 +1,8 @@
+import './css/main.css'; // Global CSS must come first
+
 import * as sapper from '@sapper/server';
 import polka from 'polka';
 import sirv from 'sirv';
-import './css/main.css';
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';

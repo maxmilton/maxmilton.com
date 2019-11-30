@@ -4,5 +4,5 @@
  */
 
 @import './import.css';
-@import 'minna-ui'; /* package */
+@import 'minna-ui/native'; /* package */
 @import './_global.css';

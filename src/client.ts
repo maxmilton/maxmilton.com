@@ -1,5 +1,6 @@
+import './css/main.css'; // Global CSS must come first
+
 import * as sapper from '@sapper/app';
-import './css/main.css';
 
 sapper.start({
   target: document.getElementById('sapper'),
