@@ -21,9 +21,8 @@
   <p class="lead ttu">&#9829; web tech, esoteric platforms, and experiments</p>
 </header>
 
-<!-- FIXME: Once the @minna-ui/css issues are fixed, only use `ns-*` -->
-<div class="con dg x3 ns-x3">
-  <div class="w2 ns-w2">
+<div class="con dg ns-x3">
+  <div class="ns-w2">
     <h3>Latest blog posts</h3>
     <ul>
       {#each posts.slice(0, 6) as post}
