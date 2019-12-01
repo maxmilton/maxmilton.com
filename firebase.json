@@ -1,6 +1,6 @@
 {
   "hosting": {
     "public": "__sapper__/export",
-    "ignore": ["!/__sapper__", "/*"]
+    "ignore": ["!__sapper__/export/**", "*"]
   }
 }
