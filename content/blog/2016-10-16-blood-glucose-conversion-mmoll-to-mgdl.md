@@ -13,26 +13,13 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
 ## Blood glucose conversion calculator
 
-<!-- <div class="row mb-2 justify-content-center">
-  <div class="col-5 col-md-3">
-    <label for="mmoll" class="lead">mmol/L</label>
-    <input type="number" name="mmoll" id="mmoll" class="form-control form-control-lg" step="0.1" min="0" value="5">
-  </div>
-  <div style="font-size: 2rem !important; padding: 1rem;">
-    =
-  </div>
-  <div class="col-5 col-md-3">
-    <label for="mgdl" class="lead">mg/dL</label>
-    <input type="number" name="mgdl" id="mgdl" class="form-control form-control-lg" min="0" value="90">
-  </div>
-</div> -->
 <div class="dfc">
   <div>
     <label for="mmoll" class="lead">mmol/L</label>
     <input type="number" id="mmoll" step="0.1" min="0" value="5">
   </div>
 
-  <div style="font-size: 2em" class="pa2 mt3">=</div>
+  <div class="pa2 mt3 big">=</div>
 
   <div>
     <label for="mgdl" class="lead">mg/dL</label>
@@ -42,6 +29,7 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
 <script>
 (function(){
+  // Wait until after sapper hydration has run and replaced elements
   window.addEventListener('load', function() {
     var mmoll = document.getElementById('mmoll');
     var mgdl = document.getElementById('mgdl');

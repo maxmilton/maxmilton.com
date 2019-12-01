@@ -1,3 +1,10 @@
+/* Typography */
+
+.big {
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+  font-size: 2em;
+}
+
 /* Code */
 
 pre {
