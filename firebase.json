@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "__sapper__/export",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "trailingSlash": false
   }
 }
