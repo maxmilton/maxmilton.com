@@ -28,7 +28,7 @@ jobs:
       - run: yarn export
       - run: yarn export
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+        uses: w9jds/firebase-action@v1.2.0
         with:
           args: deploy --only hosting:prod
         env:
