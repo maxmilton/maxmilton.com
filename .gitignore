@@ -1,8 +1,8 @@
-node_modules
+*.bak
 /__sapper__/
+/.firebase
 /dist/
 /test/coverage/
+node_modules
 package-lock.json*
 yarn-error.log
-*.bak
-*.PRIVATE.*
