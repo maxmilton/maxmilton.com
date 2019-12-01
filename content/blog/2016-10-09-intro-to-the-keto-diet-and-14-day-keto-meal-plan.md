@@ -53,11 +53,11 @@ Now you're thinking "Enough with the simplistic science homie, just gimme the go
 - Add MCT oil to meals if you need to boost your daily fat intake---it's flavourless and goes well with almost anything.
 - If you're not hungry just skip a meal or eat a small portion.
 
-Bonus: Before starting the diet do a 5-day water only fast for a quicker onset of ketosis. If you've never fasted before I recommend just doing a 1 1/2 day fast---eat an early dinner and then don't eat again until a late dinner the next day. It's not as hard as it sounds! There's [solid science showing the benefits of fasting]({{<relref "intro-to-therapeutic-fasting.md">}}).
+Bonus: Before starting the diet do a 5-day water only fast for a quicker onset of ketosis. If you've never fasted before I recommend just doing a 1 1/2 day fast---eat an early dinner and then don't eat again until a late dinner the next day. It's not as hard as it sounds! There's [solid science showing the benefits of fasting](/blog/intro-to-therapeutic-fasting).
 
 ### Macronutrient ratios
 
-"How much of everything should I eat?", I hear you saying. Well...
+"How much of everything should I eat?", I hear you saying. Well…
 
 Calculate your daily caloric intake and macro ratio to use as a starting point. I say starting point because as you learn how your body reacts to foods, you should adjust your ratios to suit what works best for you. Make things easy for yourself by using [this keto calculator](http://keto-calculator.ankerl.com/).
 
@@ -119,6 +119,18 @@ You don't have to start at the beginning of the week (or even eat 3 meals a day)
 | 13  | Bacon and eggs + avocado cubes           | Bolognese pizza                         | [Ribeye steak][11] and [keto mash][12]           |
 | 14  | Bulletproof coffee                       | Pan-roasted salmon with [keto mash][13] | [Keto mexican "rice"][14] + [avocado mousse][15] |
 
+## Snacks
+
+When you start you may have carb cravings. Avoid snacking if possible. Once you become more keto adapted the hunger will go away, however, if you still get strong cravings for carbs, eat a fat heavy snack from the list below. When I first heard about it, I didn't believe eating fat could satiate carb cravings… but it works, try it!
+
+- Any [keto fat bomb recipe from here](https://ketodietapp.com/Blog/post/2015/03/24/60-amazing-fat-bomb-recipes) or [Google it](https://www.google.com/search?q=keto+fat+bomb), just be careful of excess carbs or protein
+- Small handful of nuts (walnuts, almonds, macadamia)
+- Large scoop of coconut oil (be careful to start with smaller portions, otherwise you might shit yourself, literally)
+
+If you're really, really struggling, take 500 mg of L-glutamine---an amino acid which acts as a substitute for sugar in the brain. Or try going for a walk to boost your dopamine levels which can also reduce carb cravings.
+
+Good luck in the kitchen!
+
 [1]: https://www.bulletproofexec.com/how-to-make-your-coffee-bulletproof-and-your-morning-too/
 [2]: http://www.wickedstuffed.com/keto-recipes/best-low-carb-keto-meatballs/
 [3]: http://www.ibreatheimhungry.com/2012/05/cheaters-tandoori-style-chicken-thighs.html
@@ -144,15 +156,3 @@ You don't have to start at the beginning of the week (or even eat 3 meals a day)
 [23]: http://www.ruled.me/bacon-cheddar-chive-omelette/
 [24]: http://ketodietapp.com/Blog/post/2015/06/07/superfood-keto-soup
 [25]: http://ketodietapp.com/Blog/post/2015/04/27/keto-pizza-bolognese
-
-## Snacks
-
-When you start you may have carb cravings. Avoid snacking if possible. Once you become more keto adapted the hunger will go away, however, if you still get strong cravings for carbs, eat a fat heavy snack from the list below. When I first heard about it, I didn't believe eating fat could satiate carb cravings... but it works, try it!
-
-- Any [keto fat bomb recipe from here](https://ketodietapp.com/Blog/post/2015/03/24/60-amazing-fat-bomb-recipes) or [Google it](https://www.google.com/search?q=keto+fat+bomb), just be careful of excess carbs or protein
-- Small handful of nuts (walnuts, almonds, macadamia)
-- Large scoop of coconut oil (be careful to start with smaller portions, otherwise you might shit yourself, literally)
-
-If you're really, really struggling, take 500 mg of L-glutamine---an amino acid which acts as a substitute for sugar in the brain. Or try going for a walk to boost your dopamine levels which can also reduce carb cravings.
-
-Good luck in the kitchen!
