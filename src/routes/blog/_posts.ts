@@ -49,8 +49,7 @@ export default async function getPosts(): Promise<PostItem[]> {
         vfile.readSync(`content/blog/${file}`),
       ) as Parent;
       const metadata =
-        // ast.children[0]?.type === 'yaml'
-        ast.children[0] && ast.children[0].type === 'yaml'
+        ast.children[0].type === 'yaml'
           ? yaml.safeLoad(ast.children[0].value as string)
           : {};
       const result = await processor.run(ast);
