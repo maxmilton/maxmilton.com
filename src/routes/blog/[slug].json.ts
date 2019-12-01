@@ -14,7 +14,7 @@ export async function get(req: Req, res: Res): Promise<void> {
     });
   }
 
-  const post = lookup.get(req.params.slug);
+  const post = lookup.get(req.params!.slug);
 
   if (post) {
     res.setHeader('Cache-Control', `max-age=${TIME_FIVE_MINUTES}`);

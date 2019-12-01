@@ -8,6 +8,8 @@ import raw from 'rehype-raw';
 // @ts-ignore - no included types
 import shiki from 'rehype-shiki';
 // @ts-ignore - no included types
+import _slug from 'rehype-slug';
+// @ts-ignore - no included types
 import stringify from 'rehype-stringify';
 // @ts-ignore - no included types
 import frontmatter from 'remark-frontmatter';
@@ -17,8 +19,7 @@ import remark2rehype from 'remark-rehype';
 // @ts-ignore - no included types
 import vfile from 'to-vfile';
 import unified from 'unified';
-// @ts-ignore - no included types
-import _slug from 'rehype-slug';
+import { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
 import { promisify } from 'util';
 import { PostItem } from '##/types';
 
@@ -44,10 +45,13 @@ export default async function getPosts(): Promise<PostItem[]> {
         .use(shiki, { theme: 'zeit', useBackground: true })
         .use(stringify, { allowDangerousHTML: true });
 
-      const ast = processor.parse(vfile.readSync(`content/blog/${file}`));
+      const ast = processor.parse(
+        vfile.readSync(`content/blog/${file}`),
+      ) as Parent;
       const metadata =
-        ast.children && ast.children[0]?.type === 'yaml'
-          ? yaml.safeLoad(ast.children[0].value)
+        // ast.children[0]?.type === 'yaml'
+        ast.children[0] && ast.children[0].type === 'yaml'
+          ? yaml.safeLoad(ast.children[0].value as string)
           : {};
       const result = await processor.run(ast);
       const html = processor.stringify(result);

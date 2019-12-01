@@ -5,7 +5,7 @@ import getPosts from './_posts';
 const TIME_FIVE_MINUTES = 5 * 60 * 1e3;
 let json: string;
 
-export async function get(req: Req, res: Res): Promise<void> {
+export async function get(_req: Req, res: Res): Promise<void> {
   if (!json || process.env.NODE_ENV !== 'production') {
     const posts = (await getPosts())
       .filter((post) => !post.metadata.draft)

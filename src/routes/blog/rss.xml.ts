@@ -43,7 +43,7 @@ const rss = (posts: PostItem[]): string =>
     .replace(/[^\S]+</gm, '<')
     .trim();
 
-export async function get(req: Req, res: Res): Promise<void> {
+export async function get(_req: Req, res: Res): Promise<void> {
   const posts = await getPosts();
 
   send(res, 200, rss(posts), {
