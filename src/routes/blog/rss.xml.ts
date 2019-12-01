@@ -2,7 +2,7 @@ import send from '@polka/send';
 import { PostItem, Req, Res } from '##/types';
 import getPosts from './_posts';
 
-const TIME_THIRTY_MINUTES = 30 * 60 * 1e3;
+const TIME_THIRTY_MINUTES = 1800000; // 30 * 60 * 1e3;
 const months = ',Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
 
 function formatPubdate(str: string): string {

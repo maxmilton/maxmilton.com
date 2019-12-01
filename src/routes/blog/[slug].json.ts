@@ -2,7 +2,7 @@ import send from '@polka/send';
 import { PostItem, Req, Res } from '##/types';
 import getPosts from './_posts';
 
-const TIME_FIVE_MINUTES = 5 * 60 * 1e3;
+const TIME_FIVE_MINUTES = 300000; // 5 * 60 * 1e3;
 let lookup: Map<string, PostItem>;
 
 export async function get(req: Req, res: Res): Promise<void> {
