@@ -16,6 +16,8 @@ jobs:
       - run: yarn run test-ci
         env:
           CI: true
+      # Exporting twice is required to get PurgeCSS to work as expected
+      - run: yarn export
       - run: yarn export
       - uses: actions/gcloud/auth@master
         env:
