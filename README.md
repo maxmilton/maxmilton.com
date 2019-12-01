@@ -1,6 +1,6 @@
 [![Build status](https://img.shields.io/github/workflow/status/MaxMilton/MaxMilton.com/ci)](https://github.com/MaxMilton/MaxMilton.com/actions)
 [![Coverage status](https://img.shields.io/codeclimate/coverage/MaxMilton/MaxMilton.com)](https://codeclimate.com/github/MaxMilton/MaxMilton.com)
-[![Licence](https://img.shields.io/npm/l/minna-ui.svg)](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE)
+[![Licence](https://img.shields.io/github/license/MaxMilton/MaxMilton.com)](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE)
 
 # MaxMilton.com
 
