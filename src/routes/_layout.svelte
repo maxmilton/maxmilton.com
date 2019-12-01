@@ -26,13 +26,6 @@
   });
 </script>
 
-<style>
-  .big {
-    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
-    font-size: 2em;
-  }
-</style>
-
 <svelte:window on:error="{sendError}" on:unhandledrejection="{sendError}" />
 
 <Nav segment="{segment}" />
