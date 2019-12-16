@@ -2,6 +2,9 @@
   "css.validate": false,
   "editor.formatOnSave": true,
   "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "eslint.enable": true,
   "eslint.validate": [
     { "language": "html", "autoFix": true },
