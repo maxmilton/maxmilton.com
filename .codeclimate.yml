@@ -1,0 +1,32 @@
+version: '2'
+
+plugins:
+  eslint:
+    enabled: true
+    config:
+      extensions:
+        - .html
+        - .js
+        - .md
+        - .mjs
+        - .svelte
+        - .svg
+        - .ts
+
+  fixme:
+    enabled: true
+
+  shellcheck:
+    enabled: true
+
+  stylelint:
+    enabled: true
+    config:
+      extensions:
+        - .css
+        - .html
+        - .js
+        - .md
+        - .svelte
+        - .svg
+        - .ts
