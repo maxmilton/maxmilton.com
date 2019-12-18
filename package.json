@@ -10,13 +10,14 @@
     "_run": "yarn export && sirv __sapper__/export --dev --single --cors",
     "build": "NODE_ENV=production sapper build",
     "dev": "NODE_ENV=development sapper dev",
-    "export": "NODE_ENV=production sapper export",
+    "export": "NODE_ENV=production sapper export --entry '/ /404'",
     "lint": "yarn lint:md && yarn lint:css && yarn lint:js && yarn lint:types",
     "lint:css": "stylelint **/*.{css,html,js,md,svelte,svg,ts}",
     "lint:css_____FIXME": "stylelint **/*.{css,html,js,md,svelte,svg,ts} --report-needless-disables",
     "lint:js": "eslint --ext html,js,md,mjs,svelte,svg,ts .",
     "lint:md": "remark --frail --quiet .",
     "lint:types": "tsc --noEmit --allowJs --checkJs",
+    "postexport": "mv ./__sapper__/export/404/index.html ./__sapper__/export/404.html",
     "test": "jest --notify --watch",
     "test-ci": "jest --coverage --ci"
   },
@@ -53,7 +54,6 @@
     "rollup": "1.27.13",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-sucrase": "2.1.0",
     "rollup-plugin-svelte": "5.1.1",
     "rollup-plugin-terser": "5.1.3",
     "rollup-plugin-typescript": "1.0.1",
@@ -113,7 +113,9 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "./node_modules/minna-tools/eslint.js"
+      "@minna-ui/eslint-config",
+      "@minna-ui/eslint-config/typed",
+      "@minna-ui/eslint-config/svelte"
     ]
   },
   "eslintIgnore": [
