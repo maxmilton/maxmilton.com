@@ -113,9 +113,7 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@minna-ui/eslint-config",
-      "@minna-ui/eslint-config/typed",
-      "@minna-ui/eslint-config/svelte"
+      "./node_modules/minna-tools/eslint.js"
     ]
   },
   "eslintIgnore": [
