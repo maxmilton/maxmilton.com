@@ -2,16 +2,8 @@ version: '2'
 
 plugins:
   eslint:
-    enabled: true
-    config:
-      extensions:
-        - .html
-        - .js
-        - .md
-        - .mjs
-        - .svelte
-        - .svg
-        - .ts
+    # Code Climate doesn't support our config
+    enabled: false
 
   fixme:
     enabled: true
@@ -20,13 +12,5 @@ plugins:
     enabled: true
 
   stylelint:
-    enabled: true
-    config:
-      extensions:
-        - .css
-        - .html
-        - .js
-        - .md
-        - .svelte
-        - .svg
-        - .ts
+    # Code Climate doesn't support our config
+    enabled: false
