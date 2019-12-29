@@ -6,13 +6,12 @@ import replace from '@rollup/plugin-replace';
 import { gitDescribe, postcss, purgecss } from 'minna-tools';
 import { preprocess } from 'minna-ui';
 import path from 'path';
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 // @ts-ignore - no included types
 import svelte from 'rollup-plugin-svelte';
 import { terser } from 'rollup-plugin-terser';
-// @ts-ignore - no included types
-import typescript from 'rollup-plugin-typescript';
+import typescript from '@rollup/plugin-typescript';
 // @ts-ignore - no included types
 import config from 'sapper/config/rollup.js';
 import json from '@rollup/plugin-json';
