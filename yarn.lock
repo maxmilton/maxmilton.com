@@ -5967,16 +5967,16 @@ rehype-raw@4.0.1:
   dependencies:
     hast-util-raw "^5.0.0"
 
-rehype-shiki@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/rehype-shiki/-/rehype-shiki-0.0.5.tgz#96dddc65474b2c3bb687ec1af7dc5223ca0555c9"
-  integrity sha512-eC5bg9GgZSKoOMscYCEIPfxuAnYkySi68x8gW8Y59cKAjcHxSKlK7AXYxolfvVfuxM2eLI78fYsj0J7qsgMh3A==
+rehype-shiki@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/rehype-shiki/-/rehype-shiki-0.0.6.tgz#6b78b82a25f193a3a4df474b769ae04e9b71c117"
+  integrity sha512-hyG36mOJ3xs5v8fgfENR+UX4hojZ3lbgpcY7rpLPPDkvLXFeEG+HiA/XDZHc/reaAuS2f4lQLmi9F2cJoxNsvA==
   dependencies:
     hast-util-to-string "^1.0.2"
     shiki "^0.1.6"
     shiki-languages "^0.1.6"
-    unist-builder "^1.0.4"
-    unist-util-visit "^2.0.0"
+    unist-builder "^2.0.2"
+    unist-util-visit "^2.0.1"
 
 rehype-slug@2.0.3:
   version "2.0.3"
@@ -8184,12 +8184,17 @@ uniqs@^2.0.0:
   resolved "https://registry.yarnpkg.com/uniqs/-/uniqs-2.0.0.tgz#ffede4b36b25290696e6e165d4a59edb998e6b02"
   integrity sha1-/+3ks2slKQaW5uFl1KWe25mOawI=
 
-unist-builder@^1.0.1, unist-builder@^1.0.4:
+unist-builder@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unist-builder/-/unist-builder-1.0.4.tgz#e1808aed30bd72adc3607f25afecebef4dd59e17"
   integrity sha512-v6xbUPP7ILrT15fHGrNyHc1Xda8H3xVhP7/HAIotHOhVPjH5dCXA097C3Rry1Q2O+HbOLCao4hfPB+EYEjHgVg==
   dependencies:
     object-assign "^4.1.0"
+
+unist-builder@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/unist-builder/-/unist-builder-2.0.2.tgz#f24abd96f703925f03df175c1e4143f79e348839"
+  integrity sha512-I4TpMKqInirL3CG23f1bZyGE/UJecAYHcv586XMLqIkC0iUkI1hi+WZENoaKwdguC0O8nDaYRhHtWjuSjN4HDw==
 
 unist-util-find-all-after@^1.0.2:
   version "1.0.5"
@@ -8261,7 +8266,7 @@ unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
-unist-util-visit@^2.0.0:
+unist-util-visit@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.1.tgz#b4e1c1cb414250c6b3cb386b8e461d79312108ae"
   integrity sha512-bEDa5S/O8WRDeI1mLaMoKuFFi89AjF+UAoMNxO+bbVdo06q+53Vhq4iiv1PenL6Rx1ZxIpXIzqZoc5HD2I1oMA==
