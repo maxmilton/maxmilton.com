@@ -6964,10 +6964,10 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sirv-cli@1.0.0-next.2:
-  version "1.0.0-next.2"
-  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.0-next.2.tgz#3b957dc77a3007504e85dd7a307538618081604b"
-  integrity sha512-7OkYgst75BejKYdp10M9FNAt3rNY3NyAdUFeTb+iFG0aWNNB5PAxLB249aQaQB08t9GwzrLeFDc5K1Up6iWhVw==
+sirv-cli@1.0.0-next.3:
+  version "1.0.0-next.3"
+  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.0-next.3.tgz#800aa5d39765b6895d3a74a9e33326e8efc725d4"
+  integrity sha512-VRNigv4L8rosTYEXwcE4dBgtuicNuknbYH38UO97yTNLyMwCcmchRwcsHbEJYBaHW9qy3D+MFJs3JvMZVEEsxg==
   dependencies:
     console-clear "^1.1.0"
     get-port "^3.2.0"
