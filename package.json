@@ -1,11 +1,12 @@
 {
   "name": "maxmilton.com",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": true,
   "description": "My personal blog",
   "license": "MIT",
   "repository": "https://github.com/MaxMilton/MaxMilton.com",
   "author": "Max Milton <max@wearegenki.com>",
+  "homepage": "https://maxmilton.com",
   "scripts": {
     "_run": "yarn export && sirv __sapper__/export --dev --single --cors",
     "build": "NODE_ENV=production sapper build",
@@ -13,7 +14,6 @@
     "export": "NODE_ENV=production sapper export --entry '/ /404'",
     "lint": "yarn lint:md && yarn lint:css && yarn lint:js && yarn lint:types",
     "lint:css": "stylelint **/*.{css,html,js,md,svelte,svg,ts}",
-    "lint:css_____FIXME": "stylelint **/*.{css,html,js,md,svelte,svg,ts} --report-needless-disables",
     "lint:js": "eslint --ext html,js,md,mjs,svelte,svg,ts .",
     "lint:md": "remark --frail --quiet .",
     "lint:types": "tsc --noEmit --allowJs --checkJs",
