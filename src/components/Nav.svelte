@@ -34,7 +34,8 @@
 
 <nav class="dfc">
   <a id="logo" href="/">Max Milton</a>
-  <a class="nav-item {segment === undefined ? 'active' : ''}" href=".">Home</a>
+  <!-- Hide "Home" menu item on small screens to prevent overflow -->
+  <a class="dn ns-dib nav-item {segment === undefined ? 'active' : ''}" href="/">Home</a>
   <a class="nav-item {segment === 'about' ? 'active' : ''}" href="about">About</a>
   <a rel=prefetch class="nav-item {segment === 'blog' ? 'active' : ''}" href="blog">Blog</a>
 </nav>
