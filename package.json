@@ -1,11 +1,12 @@
 {
   "name": "maxmilton.com",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": true,
   "description": "My personal blog",
   "license": "MIT",
   "repository": "https://github.com/MaxMilton/MaxMilton.com",
   "author": "Max Milton <max@wearegenki.com>",
+  "homepage": "https://maxmilton.com",
   "scripts": {
     "_run": "yarn export && sirv __sapper__/export --dev --single --cors",
     "build": "NODE_ENV=production sapper build",
@@ -13,7 +14,6 @@
     "export": "NODE_ENV=production sapper export --entry '/ /404'",
     "lint": "yarn lint:md && yarn lint:css && yarn lint:js && yarn lint:types",
     "lint:css": "stylelint **/*.{css,html,js,md,svelte,svg,ts}",
-    "lint:css_____FIXME": "stylelint **/*.{css,html,js,md,svelte,svg,ts} --report-needless-disables",
     "lint:js": "eslint --ext html,js,md,mjs,svelte,svg,ts .",
     "lint:md": "remark --frail --quiet .",
     "lint:types": "tsc --noEmit --allowJs --checkJs",
@@ -29,16 +29,19 @@
   },
   "devDependencies": {
     "@rollup/plugin-alias": "3.0.0",
+    "@rollup/plugin-commonjs": "11.0.1",
     "@rollup/plugin-json": "4.0.1",
+    "@rollup/plugin-node-resolve": "7.0.0",
     "@rollup/plugin-replace": "2.3.0",
+    "@rollup/plugin-typescript": "2.1.0",
     "@types/express": "4.17.2",
     "@types/js-yaml": "3.12.1",
     "@wearegenki/renovate-config": "1.0.0",
     "eslint": "6.8.0",
     "jest": "25.0.0",
     "js-yaml": "3.13.1",
-    "minna-tools": "0.36.0-next.24",
-    "minna-ui": "0.36.0-next.24",
+    "minna-tools": "0.35.2-next.58",
+    "minna-ui": "0.35.2-next.58",
     "postcss": "7.0.26",
     "postcss-extend-rule": "3.0.0",
     "postcss-scss": "2.0.0",
@@ -52,11 +55,8 @@
     "remark-parse": "7.0.2",
     "remark-rehype": "5.0.0",
     "rollup": "1.29.0",
-    "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-svelte": "5.1.1",
     "rollup-plugin-terser": "5.2.0",
-    "rollup-plugin-typescript": "1.0.1",
     "sapper": "0.27.9",
     "sirv-cli": "1.0.0-next.3",
     "stylelint": "13.0.0",
@@ -67,39 +67,6 @@
     "unified": "8.4.2"
   },
   "resolutions": {
-    "vfile": "^4.0.2"
-  },
-  "____resolutions": {
-    "@minna-ui/browserslist-config": "link:../minna-ui/utils/browserslist-config",
-    "@minna-ui/code-view": "link:../minna-ui-labs/components/code-view",
-    "@minna-ui/collapse": "link:../minna-ui/components/collapse",
-    "@minna-ui/css": "link:../minna-ui/css",
-    "@minna-ui/eslint-config": "link:../minna-ui/utils/eslint-config",
-    "@minna-ui/eslint-import-resolver": "link:../minna-ui/utils/eslint-import-resolver",
-    "@minna-ui/jest-config": "link:../minna-ui/utils/jest-config",
-    "@minna-ui/navbar": "link:../minna-ui/components/navbar",
-    "@minna-ui/postcss-config": "link:../minna-ui/utils/postcss-config",
-    "@minna-ui/postcss-config-x": "link:../minna-ui-labs/utils/postcss-config-x",
-    "@minna-ui/postcss-plugin": "link:../minna-ui-labs/utils/postcss-plugin",
-    "@minna-ui/preprocess": "link:../minna-ui/utils/preprocess",
-    "@minna-ui/prettier-config": "link:../minna-ui/utils/prettier-config",
-    "@minna-ui/remark-config": "link:../minna-ui/utils/remark-config",
-    "@minna-ui/rollup-plugin-dev-server": "link:../minna-ui/utils/rollup-plugin-dev-server",
-    "@minna-ui/rollup-plugin-emit-css": "link:../minna-ui/utils/rollup-plugin-emit-css",
-    "@minna-ui/rollup-plugin-emit-html": "link:../minna-ui/utils/rollup-plugin-emit-html",
-    "@minna-ui/rollup-plugin-postcss": "link:../minna-ui/utils/rollup-plugin-postcss",
-    "@minna-ui/rollup-plugin-purgecss": "link:../minna-ui/utils/rollup-plugin-purgecss",
-    "@minna-ui/select": "link:../minna-ui/components/select",
-    "@minna-ui/slider": "link:../minna-ui-labs/components/slider",
-    "@minna-ui/stylelint-config": "link:../minna-ui/utils/stylelint-config",
-    "@minna-ui/switch": "link:../minna-ui/components/switch",
-    "@minna-ui/tabs": "link:../minna-ui-labs/components/tabs",
-    "@minna-ui/toast": "link:../minna-ui-labs/components/toast",
-    "@minna-ui/tooltip": "link:../minna-ui/components/tooltip",
-    "@minna-ui/ts-config": "link:../minna-ui/utils/ts-config",
-    "@minna-ui/utils": "link:../minna-ui/utils/utils",
-    "minna-tools": "link:../minna-ui/utils/minna-tools",
-    "minna-ui": "link:../minna-ui/utils/minna-ui",
     "vfile": "^4.0.2"
   },
   "browserslist": {
@@ -113,9 +80,7 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@minna-ui/eslint-config",
-      "@minna-ui/eslint-config/typed",
-      "@minna-ui/eslint-config/svelte"
+      "./node_modules/minna-tools/eslint.js"
     ]
   },
   "eslintIgnore": [

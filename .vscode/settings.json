@@ -1,7 +1,7 @@
 {
   "css.validate": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true
   },
   "editor.formatOnSave": true,
   "eslint.enable": true,
@@ -9,7 +9,6 @@
     "*.css": "scss",
     "*.svelte": "html"
   },
-  "files.eol": "\n",
   "javascript.implicitProjectConfig.checkJs": true,
   "scss.validate": false,
   "stylelint.enable": true
