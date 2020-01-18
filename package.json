@@ -63,7 +63,7 @@
     "svelte": "3.17.1",
     "to-vfile": "6.0.0",
     "tslib": "1.10.0",
-    "typescript": "3.7.4",
+    "typescript": "3.7.5",
     "unified": "8.4.2"
   },
   "resolutions": {
