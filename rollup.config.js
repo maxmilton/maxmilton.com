@@ -115,6 +115,7 @@ export default {
       svelte({
         dev,
         generate: 'ssr',
+        hydratable: true,
         preprocess,
         preserveWhitespace: true,
       }),
