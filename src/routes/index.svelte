@@ -18,7 +18,7 @@
 <header class="tc">
   <h1 class="headline">Max Milton</h1>
   <h2>Write the codes.</h2>
-  <p class="lead ttu">&#9829; web tech, esoteric platforms, and experiments</p>
+  <p class="lead ttu">&#9829; web tech, esoteric platforms, & experiments</p>
 </header>
 
 <div class="con dg ns-x3">
