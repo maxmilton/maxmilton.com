@@ -5723,10 +5723,10 @@ rehype-raw@4.0.1:
   dependencies:
     hast-util-raw "^5.0.0"
 
-rehype-shiki@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/rehype-shiki/-/rehype-shiki-0.0.6.tgz#6b78b82a25f193a3a4df474b769ae04e9b71c117"
-  integrity sha512-hyG36mOJ3xs5v8fgfENR+UX4hojZ3lbgpcY7rpLPPDkvLXFeEG+HiA/XDZHc/reaAuS2f4lQLmi9F2cJoxNsvA==
+rehype-shiki@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/rehype-shiki/-/rehype-shiki-0.0.7.tgz#d272c72cea29fec76170ab0413de7739484ae6d3"
+  integrity sha512-CaJ0Wcb9Xu0FNCIL6DGjZIyU+NGB9ls64h8OmdrWtKsC1y+vy6UlTGxSVwksQ0QXG3nH1i/iECnq7a2G6X9u8A==
   dependencies:
     hast-util-to-string "^1.0.2"
     shiki "^0.1.6"
