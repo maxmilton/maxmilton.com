@@ -67,7 +67,7 @@
     "unified": "8.4.2"
   },
   "resolutions": {
-    "vfile": "^4.0.2"
+    "vfile": "^4.0.3"
   },
   "browserslist": {
     "production": [
