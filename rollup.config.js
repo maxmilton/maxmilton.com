@@ -70,8 +70,8 @@ export default {
     onwarn,
     output: config.client.output(),
     plugins: [
-      // @ts-ignore
       replace({
+        // @ts-ignore
         'process.browser': true,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -103,8 +103,8 @@ export default {
     onwarn,
     output: config.server.output(),
     plugins: [
-      // @ts-ignore
       replace({
+        // @ts-ignore
         'process.browser': false,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -136,8 +136,8 @@ export default {
     output: config.serviceworker.output(),
     plugins: [
       resolve(),
-      // @ts-ignore
       replace({
+        // @ts-ignore
         'process.browser': true,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
