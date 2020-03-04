@@ -63,11 +63,11 @@
     "svelte": "3.19.1",
     "to-vfile": "6.0.1",
     "tslib": "1.11.1",
-    "typescript": "3.7.5",
+    "typescript": "3.8.3",
     "unified": "8.4.2"
   },
   "resolutions": {
-    "vfile": "^4.0.2"
+    "vfile": "^4.0.3"
   },
   "browserslist": {
     "production": [
