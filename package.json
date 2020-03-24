@@ -40,7 +40,7 @@
     "eslint": "6.8.0",
     "jest": "25.1.0",
     "js-yaml": "3.13.1",
-    "minna-tools": "0.35.2-next.58",
+    "minna-tools": "0.36.0",
     "minna-ui": "0.36.0",
     "postcss": "7.0.27",
     "postcss-extend-rule": "3.0.0",
