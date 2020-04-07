@@ -39,11 +39,11 @@ export default async function getPosts(): Promise<PostItem[]> {
       const processor = unified()
         .use(parse)
         .use(frontmatter)
-        .use(remark2rehype, { allowDangerousHTML: true })
+        .use(remark2rehype, { allowDangerousHtml: true })
         .use(raw)
         .use(_slug)
         .use(shiki, { theme: 'zeit', useBackground: true })
-        .use(stringify, { allowDangerousHTML: true });
+        .use(stringify, { allowDangerousHtml: true });
 
       const ast = processor.parse(
         vfile.readSync(`content/blog/${file}`),

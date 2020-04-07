@@ -10,10 +10,9 @@
     "isolatedModules": true, // Ensure compatibility with sucrase
     "noEmit": true,
     "paths": {
-      "*": ["*", "types/*"],
-      "##/*": ["src/*"] // Rollup/PostCSS alias
+      "##/*": ["src/*"] // Rollup alias
     },
     "target": "esnext"
   },
-  "exclude": ["**/__sapper__/*", "test/coverage"]
+  "exclude": ["__sapper__", "node_modules", "test/coverage"]
 }

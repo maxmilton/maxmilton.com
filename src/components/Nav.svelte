@@ -26,7 +26,7 @@
     &:hover,
     &:focus,
     &:active,
-    &.active {
+    [aria-current] {
       border-bottom-color: $intent-primary;
     }
   }
@@ -35,7 +35,7 @@
 <nav class="dfc">
   <a id="logo" href="/">Max Milton</a>
   <!-- Hide "Home" menu item on small screens to prevent overflow -->
-  <a class="dn ns-dib nav-item {segment === undefined ? 'active' : ''}" href="/">Home</a>
-  <a class="nav-item {segment === 'about' ? 'active' : ''}" href="about">About</a>
-  <a rel=prefetch class="nav-item {segment === 'blog' ? 'active' : ''}" href="blog">Blog</a>
+  <a class="dn ns-dib nav-item" aria-current="{segment === undefined ? 'page' : undefined}" href="/">Home</a>
+  <a class="nav-item" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a>
+  <a rel=prefetch class="nav-item" aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a>
 </nav>
