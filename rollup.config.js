@@ -52,7 +52,7 @@ const purgecssOpts = {
   // debug: true, // see purged names
 };
 const tsOpts = {
-  exclude: /\.css$/,
+  exclude: /\.(css|test\.ts)$/,
   tsconfig: path.join(rootDir, 'tsconfig.json'),
   typescript: require('typescript'),
 };

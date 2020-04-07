@@ -14,10 +14,5 @@
     },
     "target": "esnext"
   },
-  "exclude": [
-    "__sapper__",
-    "**/__tests__/*", // Tests use sucrase
-    "node_modules",
-    "test/coverage"
-  ]
+  "exclude": ["__sapper__", "node_modules", "test/coverage"]
 }
