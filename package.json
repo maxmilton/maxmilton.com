@@ -33,7 +33,7 @@
     "@rollup/plugin-json": "4.0.2",
     "@rollup/plugin-node-resolve": "7.1.1",
     "@rollup/plugin-replace": "2.3.1",
-    "@rollup/plugin-typescript": "4.0.0",
+    "@rollup/plugin-typescript": "4.1.1",
     "@types/express": "4.17.4",
     "@types/js-yaml": "3.12.3",
     "@wearegenki/renovate-config": "1.0.0",
