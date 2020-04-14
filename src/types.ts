@@ -1,13 +1,14 @@
 // https://github.com/sveltejs/sapper/blob/master/src/interfaces.ts
 // https://github.com/sveltejs/sapper/blob/master/templates/src/server/middleware/types.ts
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { IncomingMessage, ServerResponse } from 'http';
 
 export interface Req extends IncomingMessage {
   params?: Record<string, string>;
   query?: { [key: string]: string };
   rawBody?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   body?: { [key: string]: any };
 }
 

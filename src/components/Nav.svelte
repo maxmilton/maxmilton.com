@@ -26,6 +26,7 @@
     &:hover,
     &:focus,
     &:active,
+    /* FIXME: Selector is removed in prod builds */
     [aria-current] {
       border-bottom-color: $intent-primary;
     }
