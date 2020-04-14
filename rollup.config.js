@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports, global-require */
-
-// @ts-ignore - no included types
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
@@ -9,6 +6,7 @@ import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
 import { gitDescribe, postcss, purgecss } from 'minna-tools';
 import { preprocess } from 'minna-ui';
+import { builtinModules } from 'module';
 import path from 'path';
 // @ts-ignore - no included types
 import svelte from 'rollup-plugin-svelte';
@@ -41,7 +39,6 @@ const aliasOpts = {
       replacement: path.join(rootDir, 'src', '$1'),
     },
   ],
-  resolve: ['.mjs', '.js', '.ts', '.svelte', '.json', '.md'],
 };
 const purgecssOpts = {
   content: [
@@ -52,9 +49,8 @@ const purgecssOpts = {
   // debug: true, // see purged names
 };
 const tsOpts = {
-  exclude: /\.(css|test\.ts)$/,
+  exclude: ['*.css', '**/*.test.ts'],
   tsconfig: path.join(rootDir, 'tsconfig.json'),
-  typescript: require('typescript'),
 };
 
 export default {
@@ -121,7 +117,7 @@ export default {
     ],
     external: Object.keys(pkg.dependencies).concat(
       'rehype-shiki',
-      require('module').builtinModules,
+      builtinModules,
     ),
   },
 
