@@ -49,7 +49,7 @@ const purgecssOpts = {
   // debug: true, // see purged names
 };
 const tsOpts = {
-  exclude: ['*.css', '**/*.test.ts'],
+  exclude: ['**/*.test.ts'],
   tsconfig: path.join(rootDir, 'tsconfig.json'),
 };
 

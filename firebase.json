@@ -1,6 +1,13 @@
 {
   "hosting": {
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "**/.*",
+      "**/node_modules/**",
+      "firebase.json",
+      "content/**",
+      "src/**",
+      "test/**"
+    ],
     "public": "__sapper__/export",
     "trailingSlash": false
   }
