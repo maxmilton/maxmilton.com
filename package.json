@@ -52,7 +52,7 @@
     "rehype-stringify": "7.0.0",
     "remark-cli": "8.0.0",
     "remark-frontmatter": "2.0.0",
-    "remark-parse": "8.0.1",
+    "remark-parse": "8.0.2",
     "remark-rehype": "6.0.0",
     "rollup": "2.7.1",
     "rollup-plugin-svelte": "5.2.1",
