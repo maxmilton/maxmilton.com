@@ -7464,7 +7464,16 @@ sirv-cli@1.0.0-next.3:
     sirv "^1.0.0-next.2"
     tinydate "^1.0.0"
 
-sirv@1.0.0-next.2, sirv@^1.0.0-next.2:
+sirv@1.0.0-next.4:
+  version "1.0.0-next.4"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.4.tgz#80ed871f8cbc23bca2da987f5ffa2fd17e181977"
+  integrity sha512-yZXgECqPpPVR1eYRSlyl1Uv4PyMUIAigobSTmT6Zm2TOdnklfWQz6nlW3jJFsAcbo/MFUeC0fJCpwjxBoV+iwg==
+  dependencies:
+    "@polka/url" "^1.0.0-next.9"
+    mime "^2.3.1"
+    totalist "^1.0.0"
+
+sirv@^1.0.0-next.2:
   version "1.0.0-next.2"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.2.tgz#d31b3c5c0e1dbcbc0246c4eef2ff029d843a77cb"
   integrity sha512-hWp0todr4jSb1BFBiANRmqYRXzX02l36/X4tyHPYKqMZ+e1hrDZKUjIIXrAOBRWlAE/G5cGImUciMrUcU8DeOg==
