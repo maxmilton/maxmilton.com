@@ -7,8 +7,8 @@ const TIME_THIRTY_MINUTES = 1800000; // 30 * 60 * 1e3;
 const months = ',Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',');
 
 function formatPubdate(str: string): string {
-  const [y, m, d] = str.split('-');
-  return `${d} ${months[+m]} ${y} 12:00 +0000`;
+  const [year, month, day] = str.split('-');
+  return `${day} ${months[+month]} ${year} 12:00 +0000`;
 }
 
 const rss = (posts: PostItem[]): string =>

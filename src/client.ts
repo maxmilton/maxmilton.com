@@ -1,4 +1,5 @@
-import './css/main.css'; // Global CSS must come first
+// Global CSS must come first
+import './css/main.css';
 
 import * as sapper from '@sapper/app'; // eslint-disable-line import/no-extraneous-dependencies
 

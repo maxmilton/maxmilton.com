@@ -1,4 +1,5 @@
-import './css/main.css'; // Global CSS must come first
+// Global CSS must come first
+import './css/main.css';
 
 import * as sapper from '@sapper/server'; // eslint-disable-line import/no-extraneous-dependencies
 // @ts-ignore - FIXME: Add types
@@ -9,7 +10,7 @@ import sirv from 'sirv';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-polka() // You can also use Express
+polka()
   .use(sirv('static', { dev }), sapper.middleware())
   .listen(PORT, (err?: Error) => {
     // eslint-disable-next-line no-console
