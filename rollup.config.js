@@ -83,6 +83,7 @@ export default {
       typescript(tsOpts),
       !dev && terser({ module: true }),
     ],
+    preserveEntrySignatures: false,
     onwarn,
   },
 
