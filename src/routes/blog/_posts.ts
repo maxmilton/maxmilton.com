@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-import fs from 'fs';
+import { promises as fs } from 'fs';
 import yaml from 'js-yaml';
 import path from 'path';
 // @ts-expect-error - no included types
@@ -19,45 +19,61 @@ import remark2rehype from 'remark-rehype';
 import vfile from 'to-vfile';
 import unified from 'unified';
 import { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
-import { promisify } from 'util';
-import { PostItem } from '##/types';
+import { MetaData, PostItem } from '##/types';
 
-// eslint-disable-next-line security/detect-non-literal-fs-filename
-const readdir = promisify(fs.readdir);
+const CONTENT_DIRS = ['content/blog'];
+
+if (process.env.NODE_ENV !== 'production') {
+  CONTENT_DIRS.push('content/wip');
+}
+
+const processor = unified()
+  .use(parse)
+  .use(frontmatter)
+  .use(remark2rehype, { allowDangerousHtml: true })
+  .use(raw)
+  .use(_slug)
+  .use(shiki, { theme: 'zeit', useBackground: true })
+  .use(stringify, { allowDangerousHtml: true });
 
 export default async function getPosts(): Promise<PostItem[]> {
-  const files = await readdir('content/blog');
+  const posts = CONTENT_DIRS.map(async (dir) => {
+    try {
+      await fs.access(dir);
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.warn(`Invalid directory '${dir}'`);
+      return;
+    }
 
-  const allPosts = files.map(
-    async (file): Promise<PostItem | void> => {
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
+    const files = await fs.readdir(dir);
+
+    // eslint-disable-next-line consistent-return
+    return files.map(async (file) => {
       if (path.extname(file) !== '.md') return;
 
       const match = /^(\d+-\d+-\d+)-(.+)\.md$/.exec(file);
       if (!match) throw new Error(`Invalid filename '${file}'`);
 
-      const processor = unified()
-        .use(parse)
-        .use(frontmatter)
-        .use(remark2rehype, { allowDangerousHtml: true })
-        .use(raw)
-        .use(_slug)
-        .use(shiki, { theme: 'zeit', useBackground: true })
-        .use(stringify, { allowDangerousHtml: true });
-
-      const ast = processor.parse(
-        vfile.readSync(`content/blog/${file}`),
-      ) as Parent;
+      const filePath = `${dir}/${file}`;
+      const ast = processor.parse(vfile.readSync(filePath)) as Parent;
       const metadata =
         ast.children[0].type === 'yaml'
-          ? yaml.safeLoad(ast.children[0].value as string)
-          : {};
+          ? (yaml.safeLoad(ast.children[0].value as string) as MetaData)
+          : ({} as MetaData);
       const result = await processor.run(ast);
       const html = processor.stringify(result);
 
       const [, pubdate, slug] = match;
+      const dateFormat = new Intl.DateTimeFormat('en-AU', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+      });
       const date = new Date(`${pubdate} UTC`);
       metadata.pubdate = pubdate;
-      metadata.dateString = date.toLocaleDateString('ja-JP');
+      metadata.date = dateFormat.format(date);
 
       // eslint-disable-next-line consistent-return
       return {
@@ -65,13 +81,15 @@ export default async function getPosts(): Promise<PostItem[]> {
         metadata,
         slug,
       };
-    },
-  );
+    });
+  });
 
-  const sortedPosts = await Promise.all(allPosts);
+  const allPosts = await Promise.all((await Promise.all(posts)).flat());
 
   // @ts-expect-error - filter() not modifying type as it passes through
   return (
+    allPosts
+      .filter((post) => !!post)
       // @ts-expect-error - filter() not modifying type as it passes through
       // eslint-disable-next-line id-length
       .sort((a, b) => (a.metadata.pubdate < b.metadata.pubdate ? 1 : -1))
