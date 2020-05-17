@@ -78,7 +78,14 @@
     "root": true,
     "extends": [
       "./node_modules/minna-tools/eslint.js"
-    ]
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "warn",
+      "@typescript-eslint/no-unsafe-assignment": "warn",
+      "@typescript-eslint/no-unsafe-call": "warn",
+      "@typescript-eslint/no-unsafe-member-access": "warn",
+      "@typescript-eslint/no-unsafe-return": "warn"
+    }
   },
   "eslintIgnore": [
     "**/node_modules/**",
