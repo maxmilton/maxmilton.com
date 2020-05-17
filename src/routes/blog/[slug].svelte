@@ -15,9 +15,8 @@
 </svelte:head>
 
 <article class="con">
-  <h1 id="{post.slug}">{post.metadata.title}</h1>
-  <div>{post.metadata.description}</div>
-  <div><a href="{post.metadata.authorURL}">{post.metadata.author}</a> <time datetime="{post.metadata.pubdate}">{post.metadata.dateString}</time></div>
+  <h1 id="{post.slug}" class="tc">{post.metadata.title}</h1>
+  <div class="tc mb4"><time datetime="{post.metadata.pubdate}">{post.metadata.date}</time></div>
 
   {@html post.html}
 </article>
