@@ -1,22 +1,21 @@
-/* eslint-disable import/no-extraneous-dependencies, id-length */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import fs from 'fs';
 import yaml from 'js-yaml';
 import path from 'path';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import raw from 'rehype-raw';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import shiki from 'rehype-shiki';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import _slug from 'rehype-slug';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import stringify from 'rehype-stringify';
-// @ts-ignore - no included types
 import frontmatter from 'remark-frontmatter';
 import parse from 'remark-parse';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import remark2rehype from 'remark-rehype';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import vfile from 'to-vfile';
 import unified from 'unified';
 import { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
@@ -71,11 +70,10 @@ export default async function getPosts(): Promise<PostItem[]> {
 
   const sortedPosts = await Promise.all(allPosts);
 
-  // @ts-ignore - FIXME: filter() not modififying type as it passes through
+  // @ts-expect-error - filter() not modifying type as it passes through
   return (
-    sortedPosts
-      .filter((x) => !!x)
-      // @ts-ignore - FIXME: filter() not modififying type as it passes through
+      // @ts-expect-error - filter() not modifying type as it passes through
+      // eslint-disable-next-line id-length
       .sort((a, b) => (a.metadata.pubdate < b.metadata.pubdate ? 1 : -1))
   );
 }

@@ -2,9 +2,9 @@
 import './css/main.css';
 
 import * as sapper from '@sapper/server'; // eslint-disable-line import/no-extraneous-dependencies
-// @ts-ignore - FIXME: Add types
+// @ts-expect-error - no included types
 import polka from 'polka';
-// @ts-ignore - FIXME: Add types
+// @ts-expect-error - no included types
 import sirv from 'sirv';
 
 const { PORT, NODE_ENV } = process.env;

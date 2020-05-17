@@ -1,4 +1,4 @@
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import send from '@polka/send';
 import { PostItem, Req, Res } from '##/types';
 import getPosts from './_posts';

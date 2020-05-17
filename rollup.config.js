@@ -8,10 +8,10 @@ import { gitDescribe, postcss, purgecss } from 'minna-tools';
 import { preprocess } from 'minna-ui';
 import { builtinModules } from 'module';
 import path from 'path';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import svelte from 'rollup-plugin-svelte';
 import { terser } from 'rollup-plugin-terser';
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -24,7 +24,7 @@ const dependencies = [
   ...Object.keys(pkg.devDependencies),
 ];
 
-// @ts-ignore
+// @ts-expect-error
 const onwarn = (warning, _onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
     /[/\\](@sapper|mdast-util-to-hast|hast-util-to-html)[/\\]/.test(
@@ -59,7 +59,7 @@ export default {
     output: config.client.output(),
     plugins: [
       replace({
-        // @ts-ignore
+        // @ts-expect-error
         'process.browser': true,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -94,7 +94,7 @@ export default {
     output: config.server.output(),
     plugins: [
       replace({
-        // @ts-ignore
+        // @ts-expect-error
         'process.browser': false,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
@@ -129,7 +129,7 @@ export default {
     plugins: [
       resolve(),
       replace({
-        // @ts-ignore
+        // @ts-expect-error
         'process.browser': true,
         'process.env.APP_VERSION': JSON.stringify(release),
         'process.env.NODE_ENV': JSON.stringify(mode),
