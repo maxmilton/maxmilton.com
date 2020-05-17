@@ -2,15 +2,44 @@
  * App Variables
  */
 
+/* Media queries */
+
+/* prettier-ignore */
+$ns: (min-width: 25.01em  );
+/* prettier-ignore */
+$m: (min-width: 25.01em, max-width: 40em);
+/* prettier-ignore */
+$l: (min-width: 40.01em);
+
+$container-width-max: 40em;
+
 /* Colours */
 
-$intent-primary: rgb(0, 112, 243);
-$link-color: $intent-primary;
+/* $app-background-color: $dark-app-background-color; */
+$app-background-color: rgb(34, 34, 34);
+$text-color: $dark-text-color;
+$text-color-muted: $dark-text-color-muted;
+$text-color-disabled: $dark-text-color-disabled;
+$heading-color: $dark-heading-color;
+$link-color: $dark-link-color;
+/* $background-color-muted: $dark-background-color-muted; */
+$background-color-muted: rgb(42, 42, 42);
+$divider-color: $dark-divider-color;
+$code-text-color: $dark-code-text-color;
+$code-background-color: $dark-code-background-color;
+/* $code-border-color: $dark-code-border-color; */
+$code-border-color: rgb(24, 18, 29);
+$label-text-color: $text-color;
+$tag-text-color: rgb(204, 204, 204);
+$tag-background-color: $background-color-muted;
+
+$hr-border: 1px solid $divider-color;
 
 /* Typography */
 
 $use-enhanced-type: true;
-$text-color: $dark5;
+$text-size: 1.125em; /* 18px */
+$text-size-large: 1.375em; /* 22px */
 
 /* Nav */
 
