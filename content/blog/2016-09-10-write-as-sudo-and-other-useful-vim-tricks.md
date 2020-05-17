@@ -1,11 +1,9 @@
 ---
 title: Write As Sudo And Other Useful Vim Tricks
 description: You make changes only to realise you don't have write access… here's a way to save without exiting the Vim session.
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - linux
-  - quick tips
+  - Linux
+  - Quick Tips
 ---
 
 <!-- TODO: Add an image of Vim in use -->

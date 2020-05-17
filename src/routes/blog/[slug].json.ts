@@ -1,4 +1,4 @@
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import send from '@polka/send';
 import { PostItem, Req, Res } from '##/types';
 import getPosts from './_posts';
@@ -8,7 +8,7 @@ let lookup: Map<string, PostItem>;
 
 export async function get(req: Req, res: Res): Promise<void> {
   if (!lookup || process.env.NODE_ENV !== 'production') {
-    lookup = new Map();
+    lookup = new Map<string, PostItem>();
     const posts = await getPosts();
     posts.forEach((post) => {
       lookup.set(post.slug, post);

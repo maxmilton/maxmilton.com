@@ -12,7 +12,10 @@
     "paths": {
       "##/*": ["src/*"] // Rollup alias
     },
-    "target": "esnext"
+
+    // Node v12.9.0+
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "ScriptHost"],
+    "target": "ES2019"
   },
   "exclude": ["__sapper__", "node_modules", "test/coverage"]
 }

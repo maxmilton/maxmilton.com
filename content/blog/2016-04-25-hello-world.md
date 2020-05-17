@@ -1,10 +1,8 @@
 ---
 title: Hello World
 description: Welcome to my super duper amazing shiny new blog.
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - misc
+  - Misc
 ---
 
 Welcome to my super duper amazing shiny new blog. I'll publish posts every once and a while about the things which I find exciting.

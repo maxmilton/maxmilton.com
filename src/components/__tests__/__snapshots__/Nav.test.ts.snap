@@ -4,6 +4,6 @@ exports[`Nav component renders correctly with no props 1`] = `
 "<nav class=\\"dfc\\"><a id=\\"logo\\" href=\\"/\\">Max Milton</a>
   
   <a class=\\"dn ns-dib nav-item\\" aria-current=\\"page\\" href=\\"/\\">Home</a>
-  <a class=\\"nav-item\\" href=\\"about\\">About</a>
-  <a rel=\\"prefetch\\" class=\\"nav-item\\" href=\\"blog\\">Blog</a></nav>"
+  <a class=\\"nav-item\\" href=\\"/about\\">About</a>
+  <a rel=\\"prefetch\\" class=\\"nav-item\\" href=\\"/blog\\">Blog</a></nav>"
 `;

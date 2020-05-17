@@ -7,7 +7,7 @@
 
   nav {
     padding: 0.3em 1em;
-    border-bottom: 1px solid color-mod($dark3 alpha(0.1));
+    border-bottom: 1px solid rgb(27, 27, 27);
   }
 
   /* stylelint-disable-next-line selector-max-id */
@@ -26,8 +26,7 @@
     &:hover,
     &:focus,
     &:active,
-    /* FIXME: Selector is removed in prod builds */
-    [aria-current] {
+    &[aria-current] {
       border-bottom-color: $intent-primary;
     }
   }
@@ -37,6 +36,6 @@
   <a id="logo" href="/">Max Milton</a>
   <!-- Hide "Home" menu item on small screens to prevent overflow -->
   <a class="dn ns-dib nav-item" aria-current="{segment === undefined ? 'page' : undefined}" href="/">Home</a>
-  <a class="nav-item" aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a>
-  <a rel=prefetch class="nav-item" aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">Blog</a>
+  <a class="nav-item" aria-current="{segment === 'about' ? 'page' : undefined}" href="/about">About</a>
+  <a rel=prefetch class="nav-item" aria-current="{segment === 'blog' ? 'page' : undefined}" href="/blog">Blog</a>
 </nav>

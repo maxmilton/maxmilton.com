@@ -1,7 +1,5 @@
-// Global CSS must come first
-import './css/main.css';
-
 import * as sapper from '@sapper/app'; // eslint-disable-line import/no-extraneous-dependencies
+import './css/main.css';
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 sapper.start({

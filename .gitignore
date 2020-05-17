@@ -1,6 +1,7 @@
 *.bak
 /__sapper__/
 /.firebase
+/content/wip/
 /dist/
 /test/coverage/
 node_modules

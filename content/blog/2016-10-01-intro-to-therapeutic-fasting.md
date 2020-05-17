@@ -1,12 +1,10 @@
 ---
 title: Intro To Therapeutic Fasting
 description: Reducing insulin is the key to accessing energy stored as fat. Learn what happens to your body during fasting…
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - nutrition
-  - hacks
-  - quick tips
+  - Nutrition
+  - Hacks
+  - Quick Tips
 ---
 
 Great talk by Dr. Jason Fung explaining how reducing insulin is the key metabolic driver to accessing energy stored as fat. Dr. Fung also goes into detail about what happens to your body during fasting and dispels some common fasting myths.

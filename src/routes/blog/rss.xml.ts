@@ -1,4 +1,4 @@
-// @ts-ignore - no included types
+// @ts-expect-error - no included types
 import send from '@polka/send';
 import { PostItem, Req, Res } from '##/types';
 import getPosts from './_posts';
@@ -29,9 +29,9 @@ const rss = (posts: PostItem[]): string =>
     .map(
       (post) => `
     <item>
-      <title>${post.metadata.title}</title>
+      <title>${post.metadata.title || ''}</title>
       <link>https://svelte.dev/blog/${post.slug}</link>
-      <description>${post.metadata.description}</description>
+      <description>${post.metadata.description || ''}</description>
       <pubDate>${formatPubdate(post.metadata.pubdate)}</pubDate>
     </item>
   `,

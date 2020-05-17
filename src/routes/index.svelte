@@ -12,7 +12,7 @@
 <svelte:head>
   <title>MaxMilton.com</title>
   <meta name="description" content="MaxMilton.com" />
-  <link rel="alternate" type="application/rss+xml" title="Max Milton's blog" href="blog/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Max Milton's blog" href="/blog/rss.xml">
 </svelte:head>
 
 <header class="tc">
@@ -26,19 +26,18 @@
     <h3>Latest blog posts</h3>
     <ul>
       {#each posts.slice(0, 6) as post}
-        <li class="post" data-pubdate="{post.metadata.dateString}">
-          <a class="no-underline" rel="prefetch" href="blog/{post.slug}" title="Read the article">
+        <li class="post">
+          <a rel="prefetch" href="/blog/{post.slug}" title="Read the article">
             {post.metadata.title}
           </a>
         </li>
       {/each}
     </ul>
-    <p><a href="blog">View all posts</a></p>
+    <p><a href="/blog">View all posts</a></p>
   </div>
   <div>
-    <h3>More info</h3>
-    <p><a href="about">About me</a></p>
-    <p><a href="https://github.com/MaxMilton" target="_blank">My code on Github</a></p>
-    <p><a href="mailto:max@wearegenki.com">max@wearegenki.com</a></p>
+    <h3>More</h3>
+    <p><a href="/about">About me & contact info</a></p>
+    <p><a href="https://github.com/MaxMilton" target="_blank">My projects on Github</a></p>
   </div>
 </div>
