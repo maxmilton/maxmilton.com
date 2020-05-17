@@ -21,3 +21,11 @@
 
   {@html post.html}
 </article>
+
+{#if post.metadata.tags && post.metadata.tags.length}
+  <aside class="tc mt5">
+    {#each post.metadata.tags as tag}
+      <a href="/blog/tag/{tag}" class="dib tag">{tag}</a>
+    {/each}
+  </aside>
+{/if}
