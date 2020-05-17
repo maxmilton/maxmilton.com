@@ -1,8 +1,6 @@
 ---
 title: Code Block Test
 description: Just a test.
-author: Max Milton
-authorURL: https://maxmilton.com
 ---
 
 > Just a test to see how code blocks are rendered…

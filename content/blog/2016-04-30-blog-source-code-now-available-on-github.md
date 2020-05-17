@@ -1,10 +1,8 @@
 ---
 title: Blog Source Code Now Available On Github
 description: Free and open source hugo theme. Bootstrap 4, Gulp, Node.js. Includes build and deploy scripts!
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - open source
+  - Open Source
 ---
 
 <!-- TODO: Add screenshot of Github page -->

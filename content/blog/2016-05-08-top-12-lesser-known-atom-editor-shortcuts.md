@@ -1,11 +1,9 @@
 ---
 title: Top 12 Lesser Known Atom Editor Shortcuts
 description: Make your atom code editor fly with key bindings you probably didn't even know existed.
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - programming
-  - quick tips
+  - Programming
+  - Quick Tips
 ---
 
 <!-- TODO: Add an image of Atom in use -->

@@ -1,10 +1,8 @@
 ---
 title: Intro To The Keto Diet And 14 Day Keto Meal Plan
 description: Free 14 day keto diet meal plan. The ketogenic diet is a high-fat, adequate protein, and low-carbohydrate diet.
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - nutrition
+  - Nutrition
 ---
 
 {{< img src="/img/simple-keto-meal-plan" type="jpg" alt="simple keto diet meal" >}}

@@ -1,10 +1,8 @@
 ---
 title: Blood Glucose Conversion mmol/L – mg/dL
 description: Blood sugar conversion from mmol/L to mg/dL calculator and chart.
-author: Max Milton
-authorURL: https://maxmilton.com
 tags:
-  - nutrition
+  - Nutrition
 ---
 
 To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a blood glucose conversion calculator and chart. If you're not sure what mmol/L or mg/dL mean, see [unit of measurement](#unit-of-measurement) below.
@@ -124,12 +122,12 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
 ### mmol/L
 
-Millimoles per litre, the SI unit (International System of Units) in medicine for measuring concentrations of substances in the blood.
+_Used in: the U.K., Canada, Australia, China_
 
-Used in the UK, Canada, Australia, and China.
+Millimoles per litre, the SI unit (International System of Units) in medicine for measuring concentrations of substances in the blood.
 
 ### mg/dL
 
-Milligrams per decilitre, a unit used in medicine to measure the concentration of substances in the blood. 1 mg/dL equals 0.01 grams per litre (g/L).
+_Used in: the U.S., France, Japan, Israel, India_
 
-Used in the U.S., France, Japan, Israel, and India.
+Milligrams per decilitre, a unit used in medicine to measure the concentration of substances in the blood. 1 mg/dL equals 0.01 grams per litre (g/L).
