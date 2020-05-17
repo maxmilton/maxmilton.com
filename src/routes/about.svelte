@@ -11,7 +11,7 @@
 
   <!--
   <p>I'm Max. I'm a tech consultant currently based in Sydney, Australia. I'm always up for new experiences, love learning new things, my world is full of adventure and crazy fun times!</p>
-  <p>I specialise in Ecommerce, DevOps, Linux, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too. To hire me for a project or consulting <a href="about#contact-max">contact me</a>.</p>
+  <p>I specialise in Ecommerce, DevOps, Linux, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too. To hire me for a project or consulting <a href="/about#contact-max">contact me</a>.</p>
   <p>I also run a number of ecommerce properties via my company <a href="https://wearegenki.com">We Are Genki</a>. These sites are a great example of the quality of my work.</p>
 
   <h2>Did you know...?</h2>
@@ -36,8 +36,6 @@
     <li><a href="https://github.com/MaxMilton" target="_blank">github.com/MaxMilton</a></li>
     <li><a href="https://github.com/WeAreGenki" target="_blank">github.com/WeAreGenki</a></li>
   </ul>
-
-  <hr>
 
   <h2 id="contact-max">Contact Me</h2>
 
@@ -75,13 +73,11 @@
     <button type="submit" class="button">Send your message</button>
   </form>
 
-  <p>Alternatively send an email to <a href="mailto:max@wearegenki.com">max@wearegenki.com</a>.</p>
-
-  <hr>
+  <p class="mt4">Alternatively, you can send an email to <a href="mailto:max@wearegenki.com">max@wearegenki.com</a>.</p>
 
   <h2>Copyright</h2>
 
-  <p>Unless otherwise noted, blog posts are licensed Creative Commons Attribution 4.0 (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="nofollow">CC BY 4.0</a>). Want to share a post? You're welcome to but please link back to the original article.</p>
+  <p>Unless otherwise noted, content and blog posts are licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="nofollow">Creative Commons Attribution 4.0</a>. Want to share a post? You're welcome to but please include a link back to the original article.</p>
 
-  <p>This website is an <a href="https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE" target="_blank" rel="nofollow">MIT licensed</a> open source project. View the source code: <a href="https://github.com/MaxMilton/MaxMilton.com" target="_blank" rel="nofollow">github.com/MaxMilton/MaxMilton.com</a>.</p>
+  <p>This website's code itself is an <a href="https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE" target="_blank" rel="nofollow">MIT licensed</a> open source project. See the code at <a href="https://github.com/MaxMilton/MaxMilton.com" target="_blank" rel="nofollow">github.com/MaxMilton/MaxMilton.com</a>.</p>
 </div>
