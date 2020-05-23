@@ -7084,7 +7084,16 @@ sirv-cli@1.0.0-next.4:
     sirv "^1.0.0-next.4"
     tinydate "^1.0.0"
 
-sirv@1.0.0-next.4, sirv@^1.0.0-next.4:
+sirv@1.0.0-next.5:
+  version "1.0.0-next.5"
+  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.5.tgz#d62f4297145c53b30935b279535a25b1189ce03d"
+  integrity sha512-KpM5Hu3xp8NzkPg6ht0tiyOrRa2wAMtZm8/eVzw3L9NcyHSP1uUuWc/BIAbQySVOi9TxSl2UCzadaLyYbWiT/A==
+  dependencies:
+    "@polka/url" "^1.0.0-next.9"
+    mime "^2.3.1"
+    totalist "^1.0.0"
+
+sirv@^1.0.0-next.4:
   version "1.0.0-next.4"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.4.tgz#80ed871f8cbc23bca2da987f5ffa2fd17e181977"
   integrity sha512-yZXgECqPpPVR1eYRSlyl1Uv4PyMUIAigobSTmT6Zm2TOdnklfWQz6nlW3jJFsAcbo/MFUeC0fJCpwjxBoV+iwg==
@@ -8302,7 +8311,6 @@ vfile@^4.0.0:
 
 "vscode-textmate@https://github.com/octref/vscode-textmate":
   version "4.0.1"
-  uid e65aabe2227febda7beaad31dd0fca1228c5ddf3
   resolved "https://github.com/octref/vscode-textmate#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
 
 w3c-hr-time@^1.0.2:
