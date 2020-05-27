@@ -60,7 +60,7 @@
     "sapper": "0.27.13",
     "sirv-cli": "1.0.0-next.4",
     "stylelint": "13.5.0",
-    "svelte": "3.22.3",
+    "svelte": "3.23.0",
     "to-vfile": "6.1.0",
     "tslib": "2.0.0",
     "typescript": "3.9.3",
