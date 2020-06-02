@@ -7087,10 +7087,10 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sirv-cli@1.0.0-next.4:
-  version "1.0.0-next.4"
-  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.0-next.4.tgz#fead9328012d6154f28b4fb8a4ac247c8a1de2e5"
-  integrity sha512-438y3j555XS4VEfdKzsW+xdlNKz37V7F0X5/n2aw0wqsdq+TQVAD+yTbazQjK9w1YVliXATGL+u2/pmZMsH5/g==
+sirv-cli@1.0.0-next.5:
+  version "1.0.0-next.5"
+  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.0-next.5.tgz#5ce7c7c3400ecc7937fcba48a10394b3356fdbb1"
+  integrity sha512-2p59n/77FUZ5cTBu+mt63pQIyk0fIgHlTsivTybvd8za+RrUSqstzNzxkH/M7VnwYD2NnlrzYDo61AdyMJP8DQ==
   dependencies:
     console-clear "^1.1.0"
     get-port "^3.2.0"
@@ -7098,22 +7098,13 @@ sirv-cli@1.0.0-next.4:
     local-access "^1.0.1"
     sade "^1.6.0"
     semiver "^1.0.0"
-    sirv "^1.0.0-next.4"
+    sirv "^1.0.0-next.5"
     tinydate "^1.0.0"
 
-sirv@1.0.0-next.5:
+sirv@1.0.0-next.5, sirv@^1.0.0-next.5:
   version "1.0.0-next.5"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.5.tgz#d62f4297145c53b30935b279535a25b1189ce03d"
   integrity sha512-KpM5Hu3xp8NzkPg6ht0tiyOrRa2wAMtZm8/eVzw3L9NcyHSP1uUuWc/BIAbQySVOi9TxSl2UCzadaLyYbWiT/A==
-  dependencies:
-    "@polka/url" "^1.0.0-next.9"
-    mime "^2.3.1"
-    totalist "^1.0.0"
-
-sirv@^1.0.0-next.4:
-  version "1.0.0-next.4"
-  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.4.tgz#80ed871f8cbc23bca2da987f5ffa2fd17e181977"
-  integrity sha512-yZXgECqPpPVR1eYRSlyl1Uv4PyMUIAigobSTmT6Zm2TOdnklfWQz6nlW3jJFsAcbo/MFUeC0fJCpwjxBoV+iwg==
   dependencies:
     "@polka/url" "^1.0.0-next.9"
     mime "^2.3.1"
