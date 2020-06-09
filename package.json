@@ -28,7 +28,7 @@
     "sirv": "1.0.0-next.5"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "3.1.0",
+    "@rollup/plugin-alias": "3.1.1",
     "@rollup/plugin-commonjs": "12.0.0",
     "@rollup/plugin-json": "4.0.3",
     "@rollup/plugin-node-resolve": "8.0.0",
