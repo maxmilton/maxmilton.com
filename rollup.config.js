@@ -120,6 +120,7 @@ export default {
       'rehype-shiki',
       builtinModules,
     ),
+    preserveEntrySignatures: 'strict',
   },
 
   serviceworker: {
@@ -138,5 +139,6 @@ export default {
       typescript(tsOpts),
       !dev && terser(),
     ],
+    preserveEntrySignatures: false,
   },
 };
