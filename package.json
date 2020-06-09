@@ -104,6 +104,7 @@
         "unsafe": true
       }
     },
+    "parser": "postcss-scss",
     "syntax": "postcss-scss"
   },
   "prettier": "minna-tools/prettier",
