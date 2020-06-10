@@ -25,6 +25,8 @@ if (process.env.NODE_ENV !== 'production') {
   CONTENT_DIRS.push('content/wip');
 }
 
+let postItems: PostItem[];
+
 const processor = unified()
   .use(parse)
   .use(frontmatter)
@@ -35,61 +37,60 @@ const processor = unified()
   .use(stringify, { allowDangerousHtml: true });
 
 export default async function getPosts(): Promise<PostItem[]> {
-  const posts = CONTENT_DIRS.map(async (dir) => {
-    try {
-      await fs.access(dir);
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.warn(`Invalid directory '${dir}'`);
-      return;
-    }
+  if (!postItems) {
+    const posts = CONTENT_DIRS.map(async (dir) => {
+      try {
+        await fs.access(dir);
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.warn(`Invalid directory '${dir}'`);
+        return;
+      }
 
-    // eslint-disable-next-line security/detect-non-literal-fs-filename
-    const files = await fs.readdir(dir);
-
-    // eslint-disable-next-line consistent-return
-    return files.map(async (file) => {
-      if (path.extname(file) !== '.md') return;
-
-      const match = /^(\d+-\d+-\d+)-(.+)\.md$/.exec(file);
-      if (!match) throw new Error(`Invalid filename '${file}'`);
-
-      const filePath = `${dir}/${file}`;
-      const ast = processor.parse(vfile.readSync(filePath)) as Parent;
-      const metadata =
-        ast.children[0].type === 'yaml'
-          ? (yaml.safeLoad(ast.children[0].value as string) as MetaData)
-          : ({} as MetaData);
-      const result = await processor.run(ast);
-      const html = processor.stringify(result);
-
-      const [, pubdate, slug] = match;
-      const dateFormat = new Intl.DateTimeFormat('en-AU', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric',
-      });
-      const date = new Date(`${pubdate} UTC`);
-      metadata.pubdate = pubdate;
-      metadata.date = dateFormat.format(date);
+      // eslint-disable-next-line security/detect-non-literal-fs-filename
+      const files = await fs.readdir(dir);
 
       // eslint-disable-next-line consistent-return
-      return {
-        html,
-        metadata,
-        slug,
-      };
+      return files.map(async (file) => {
+        if (path.extname(file) !== '.md') return;
+
+        const match = /^(\d+-\d+-\d+)-(.+)\.md$/.exec(file);
+        if (!match) throw new Error(`Invalid filename '${file}'`);
+
+        const filePath = `${dir}/${file}`;
+        const ast = processor.parse(vfile.readSync(filePath)) as Parent;
+        const metadata =
+          ast.children[0].type === 'yaml'
+            ? (yaml.safeLoad(ast.children[0].value as string) as MetaData)
+            : ({} as MetaData);
+        const result = await processor.run(ast);
+        const html = processor.stringify(result);
+
+        const [, pubdate, slug] = match;
+        const dateFormat = new Intl.DateTimeFormat('en-AU', {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+        });
+        const date = new Date(`${pubdate} UTC`);
+        metadata.pubdate = pubdate;
+        metadata.date = dateFormat.format(date);
+
+        // eslint-disable-next-line consistent-return
+        return {
+          html,
+          metadata,
+          slug,
+        };
+      });
     });
-  });
 
-  const allPosts = await Promise.all((await Promise.all(posts)).flat());
+    const unsortedPosts = await Promise.all((await Promise.all(posts)).flat());
 
-  // @ts-expect-error - filter() not modifying type as it passes through
-  return (
-    allPosts
-      .filter((post) => !!post)
-      // @ts-expect-error - filter() not modifying type as it passes through
-      // eslint-disable-next-line id-length
-      .sort((a, b) => (a.metadata.pubdate < b.metadata.pubdate ? 1 : -1))
-  );
+    postItems = unsortedPosts
+      .filter((post): post is PostItem => !!post && !post.metadata.draft)
+      .sort((aa, bb) => (aa.metadata.pubdate < bb.metadata.pubdate ? 1 : -1));
+  }
+
+  return postItems;
 }

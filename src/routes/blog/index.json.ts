@@ -8,12 +8,10 @@ let json: string;
 
 export async function get(_req: Req, res: Res): Promise<void> {
   if (!json || process.env.NODE_ENV !== 'production') {
-    const posts = (await getPosts())
-      .filter((post) => !post.metadata.draft)
-      .map((post) => ({
-        metadata: post.metadata,
-        slug: post.slug,
-      }));
+    const posts = (await getPosts()).map((post) => ({
+      metadata: post.metadata,
+      slug: post.slug,
+    }));
 
     json = JSON.stringify(posts);
   }
