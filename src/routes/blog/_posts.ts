@@ -9,11 +9,9 @@ import raw from 'rehype-raw';
 import shiki from 'rehype-shiki';
 // @ts-expect-error - no included types
 import _slug from 'rehype-slug';
-// @ts-expect-error - no included types
 import stringify from 'rehype-stringify';
 import frontmatter from 'remark-frontmatter';
 import parse from 'remark-parse';
-// @ts-expect-error - no included types
 import remark2rehype from 'remark-rehype';
 // @ts-expect-error - no included types
 import vfile from 'to-vfile';

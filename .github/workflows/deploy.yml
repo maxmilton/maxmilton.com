@@ -12,13 +12,13 @@ jobs:
         with:
           node-version: 14
       - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - run: yarn run build
       - run: yarn run test-ci
         env:
           CI: true
       # Exporting twice makes PurgeCSS work as expected
-      - run: yarn export
-      - run: yarn export
+      - run: yarn run export
+      - run: yarn run export
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@v1.3.0
         with:
