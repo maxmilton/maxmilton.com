@@ -25,7 +25,6 @@ const rss = (posts: PostItem[]): string =>
     <link>https://svelte.dev/blog</link>
   </image>
   ${posts
-    .filter((post) => !post.metadata.draft)
     .map(
       (post) => `
     <item>

@@ -9,7 +9,6 @@ let json: string;
 export async function get(req: Req, res: Res): Promise<void> {
   if (!json || process.env.NODE_ENV !== 'production') {
     const posts = (await getPosts())
-      .filter((post) => !post.metadata.draft)
       .filter((post) => post.metadata.tags?.includes(req.params!.slug))
       .map((post) => ({
         metadata: post.metadata,
