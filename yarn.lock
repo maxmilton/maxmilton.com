@@ -7090,10 +7090,10 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sirv-cli@1.0.0-next.9:
-  version "1.0.0-next.9"
-  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.0-next.9.tgz#639b4ee3ef282cd528559cf171c463167cafc20c"
-  integrity sha512-d7SBySr6eCMSQKLR5jORvSB2xmxOTXJS14lBjuE7FBwWihcnrOsRNIfCjepIsFW5uniVkaK8rEn9V7hkrPTceg==
+sirv-cli@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/sirv-cli/-/sirv-cli-1.0.0.tgz#3456aee9159d39fa8c9868eab3a308a3538414e0"
+  integrity sha512-84PvgoXKbUmyO3i4kHFSrXuerD2iGIcewBgdmghwjeK1nRACJ8gG/vOH1qZdBDJMZGBC8miHs7erNFwv0mXE1A==
   dependencies:
     console-clear "^1.1.0"
     get-port "^3.2.0"
@@ -7101,22 +7101,13 @@ sirv-cli@1.0.0-next.9:
     local-access "^1.0.1"
     sade "^1.6.0"
     semiver "^1.0.0"
-    sirv "^1.0.0-next.9"
+    sirv "^1.0.0"
     tinydate "^1.0.0"
 
-sirv@1.0.0:
+sirv@1.0.0, sirv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0.tgz#c55fb4dd47760c95608f5fef10760ddbfc3fe209"
   integrity sha512-NYxkb52SaeZWHH4cKwmY5N+Qv/oAVZHOUNuV+N7ohuJrlEYyQ0NdnR9s6+Ki2UFfYE4hjThzDCG9oU/qSNRdYA==
-  dependencies:
-    "@polka/url" "^1.0.0-next.9"
-    mime "^2.3.1"
-    totalist "^1.0.0"
-
-sirv@^1.0.0-next.9:
-  version "1.0.0-next.9"
-  resolved "https://registry.yarnpkg.com/sirv/-/sirv-1.0.0-next.9.tgz#8b1d81f1e06023241524b0be1c1817185158e641"
-  integrity sha512-5m7AVa8NZZEcC/O+rLA9IkLi6u3Ny9+LACjTSZ31zuomWpOHn1nF9MPGoq0L5RTgwBFUjn1RSH2qciwfJjF3Kg==
   dependencies:
     "@polka/url" "^1.0.0-next.9"
     mime "^2.3.1"

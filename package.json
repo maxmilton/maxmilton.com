@@ -58,7 +58,7 @@
     "rollup-plugin-svelte": "5.2.2",
     "rollup-plugin-terser": "6.1.0",
     "sapper": "0.27.16",
-    "sirv-cli": "1.0.0-next.9",
+    "sirv-cli": "1.0.0",
     "stylelint": "13.6.0",
     "svelte": "3.23.2",
     "to-vfile": "6.1.0",
