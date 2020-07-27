@@ -63,7 +63,7 @@
     "svelte": "3.23.2",
     "to-vfile": "6.1.0",
     "tslib": "2.0.0",
-    "typescript": "3.9.5",
+    "typescript": "3.9.7",
     "unified": "9.1.0"
   },
   "browserslist": {
