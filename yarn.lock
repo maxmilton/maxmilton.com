@@ -7710,14 +7710,15 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sapper@0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.0.tgz#1dfed31f68a5d684fc4bdf8c6a54b6dc79edf5b0"
-  integrity sha512-t5Qwaad4Zq0HFHqGVV5iw3M22B3cvczxyBzUJiQyMWuL2KY1wDi+6DslEEkpdfrOPejdphj2z4oVpE4X8iOc5w==
+sapper@0.28.10:
+  version "0.28.10"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.10.tgz#fa3341f8e04fba7bc8b6c5faedb6cff7c3ac406b"
+  integrity sha512-Z6OpuDOHxiRHKd7JCjHaDe8uOM2fFZxpTLsj/0Ib4sM034xstEvNNUtdY7Pg/a85kP3cFCnkNiM1v7W37vzDGg==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
-    shimport "^1.0.1"
+    shimport "^2.0.4"
+    source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
 
@@ -7829,10 +7830,10 @@ shiki@^0.1.7:
     shiki-themes "^0.1.7"
     vscode-textmate "https://github.com/octref/vscode-textmate"
 
-shimport@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/shimport/-/shimport-1.0.1.tgz#32ea5637e7707fdfa9037516f8c2a97786fc9031"
-  integrity sha512-Imf4gH+8WQmT1GvxS/x79qpmfnE6m50hyN1ucatX+7oMCgmaF8obZWCPIzSUe6+P+YmXM46lkP2pxiV2/lt9Og==
+shimport@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/shimport/-/shimport-2.0.4.tgz#02a36fbe53b141c39732df54f8338f3c8b31146d"
+  integrity sha512-5YOyQqYkOFSkPFnpS87De6BYzDiZBc8FS4/aTuGZiST+WmXSwWRoaNRHqyVOeEpSx9wlgYWg9WYfCuzD/11/qA==
 
 shortcss@^0.1.3:
   version "0.1.3"
