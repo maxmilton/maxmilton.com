@@ -54,7 +54,7 @@
     "remark-frontmatter": "2.0.0",
     "remark-parse": "8.0.3",
     "remark-rehype": "7.0.0",
-    "rollup": "2.23.1",
+    "rollup": "2.33.1",
     "rollup-plugin-svelte": "5.2.2",
     "rollup-plugin-terser": "6.1.0",
     "sapper": "0.28.0",
