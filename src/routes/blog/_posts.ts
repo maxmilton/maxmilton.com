@@ -3,11 +3,9 @@
 import { promises as fs } from 'fs';
 import yaml from 'js-yaml';
 import path from 'path';
-// @ts-expect-error - no included types
 import raw from 'rehype-raw';
 // @ts-expect-error - no included types
 import shiki from 'rehype-shiki';
-// @ts-expect-error - no included types
 import _slug from 'rehype-slug';
 import stringify from 'rehype-stringify';
 import frontmatter from 'remark-frontmatter';
@@ -33,8 +31,14 @@ const processor = unified()
   .use(remark2rehype, { allowDangerousHtml: true })
   .use(raw)
   .use(_slug)
-  .use(shiki, { theme: 'zeit', useBackground: true })
-  .use(stringify, { allowDangerousHtml: true });
+  .use(shiki, {
+    theme: 'zeit',
+    useBackground: true,
+  })
+  .use(stringify, {
+    allowDangerousCharacters: true,
+    allowDangerousHtml: true,
+  });
 
 export default async function getPosts(): Promise<PostItem[]> {
   if (!postItems) {
