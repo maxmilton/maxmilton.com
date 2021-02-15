@@ -27,6 +27,7 @@ self.addEventListener('activate', (event) => {
       // delete old caches
       for (const key of keys) {
         if (key !== ASSETS) {
+          // eslint-disable-next-line no-await-in-loop
           await caches.delete(key);
         }
       }
@@ -45,6 +46,7 @@ async function fetchAndCache(request): Response {
 
   try {
     const response = await fetch(request);
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     cache.put(request, response.clone());
     return response;
   } catch (err) {
