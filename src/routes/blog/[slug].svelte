@@ -1,7 +1,13 @@
 <script context="module">
   export async function preload({ params }) {
     const res = await this.fetch(`/blog/${params.slug}.json`);
-    return res.ok ? { post: await res.json() } : this.error(404, 'Not found');
+    const data = await res.json();
+
+    if (res.ok) {
+      return { post: data }
+    }
+
+    this.error(res.status, data.message);
   }
 </script>
 
