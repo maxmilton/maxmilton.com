@@ -1,5 +1,9 @@
 /* Typography */
 
+blockquote {
+  border-left-width: 3px;
+}
+
 .big {
   /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
   font-size: 2em;

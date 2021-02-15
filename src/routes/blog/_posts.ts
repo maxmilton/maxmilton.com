@@ -69,6 +69,20 @@ export default async function getPosts(): Promise<PostItem[]> {
             : ({} as MetaData);
         const result = await processor.run(ast);
         const html = processor.stringify(result);
+        // FIXME: Move this into a rehype plugin so it's code/pre aware
+        // // reduce multiple whitespace down to a single space
+        // .replace(/\s{2,}/gm, ' ')
+        // // convert remaining whitespace characters into a space
+        // .replace(/\s/gm, ' ')
+        // // remove whitespace between the most common safe tag combinations
+        // .replace(/<\/p> <p/gm, '</p><p')
+        // .replace(/<ul> <li>/gm, '<ul><li>')
+        // .replace(/<\/li> <\/ul>/gm, '</li></ul>')
+        // .replace(/<\/ul> <p/gm, '</ul><p')
+        // .replace(/<\/p> <ul/gm, '</p><ul')
+        // .replace(/<\/li> <li/gm, '</li><li')
+        // .replace(/<\/h([1-6])> <p/gm, '</h$1><p')
+        // .replace(/<\/p> <h([1-6])/gm, '</p><h$1');
 
         const [, pubdate, slug] = match;
         const dateFormat = new Intl.DateTimeFormat('en-AU', {
