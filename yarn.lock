@@ -830,10 +830,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@polka/send@1.0.0-next.7":
-  version "1.0.0-next.7"
-  resolved "https://registry.yarnpkg.com/@polka/send/-/send-1.0.0-next.7.tgz#bb32be30913abea50245b85add61fe94267b3574"
-  integrity sha512-X/7sxWMfzuHuMXSls3SuOgfwcoNakuaNWciVS/KX3RML8NIPKQYgbhpqYPCujtXK9Z/KvW3/gzr2TUpabIJRMg==
+"@polka/send@1.0.0-next.12":
+  version "1.0.0-next.12"
+  resolved "https://registry.yarnpkg.com/@polka/send/-/send-1.0.0-next.12.tgz#2da5b327a74a3f5a4148131d06e3955f7f48a685"
+  integrity sha512-MFTuvvPQ5mEHWh7sIbjNDh+304G018JRlHNB1x4lDHA4Rycd2MwbhabIh2/Y1/3p254/hQs5+KTc/0s0ruuqVQ==
 
 "@polka/url@^1.0.0-next.11", "@polka/url@^1.0.0-next.9":
   version "1.0.0-next.11"
