@@ -835,7 +835,12 @@
   resolved "https://registry.yarnpkg.com/@polka/send/-/send-1.0.0-next.7.tgz#bb32be30913abea50245b85add61fe94267b3574"
   integrity sha512-X/7sxWMfzuHuMXSls3SuOgfwcoNakuaNWciVS/KX3RML8NIPKQYgbhpqYPCujtXK9Z/KvW3/gzr2TUpabIJRMg==
 
-"@polka/url@^1.0.0-next.11", "@polka/url@^1.0.0-next.9":
+"@polka/url@^1.0.0-next.12":
+  version "1.0.0-next.12"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.12.tgz#431ec342a7195622f86688bbda82e3166ce8cb28"
+  integrity sha512-6RglhutqrGFMO1MNUXp95RBuYIuc8wTnMAV5MUhLmjTOy78ncwOw7RgeQ/HeymkKXRhZd0s2DNrM1rL7unk3MQ==
+
+"@polka/url@^1.0.0-next.9":
   version "1.0.0-next.11"
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.11.tgz#aeb16f50649a91af79dbe36574b66d0f9e4d9f71"
   integrity sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
@@ -6043,12 +6048,12 @@ pluralize@^8.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
-polka@1.0.0-next.11:
-  version "1.0.0-next.11"
-  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.11.tgz#b1543043c6e5e3c19f6b8f6835b41dfcc13be583"
-  integrity sha512-M/HBkS6ILksrDq7uvktCTev81OzuLwNtpxMyYdUhxLKQlMWdsu789XMotQU+p8JY8CM8vx8ML0HudyWjRus/lg==
+polka@1.0.0-next.14:
+  version "1.0.0-next.14"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.14.tgz#58afc40fb3380d86bf6a6385b187e25c44bb3eba"
+  integrity sha512-nRxh6lifEred8F973wMJ3YA7z8EBAf+lWFLbhIh4MnYJXmZododD8FDGj+R81xnuNNG8b4PDqNXvrB5ShKcStA==
   dependencies:
-    "@polka/url" "^1.0.0-next.11"
+    "@polka/url" "^1.0.0-next.12"
     trouter "^3.1.0"
 
 posix-character-classes@^0.1.0:
