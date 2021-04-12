@@ -4,6 +4,7 @@ import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
+// @ts-expect-error - no included types
 import url from '@rollup/plugin-url';
 import { gitDescribe, postcss, purgecss } from 'minna-tools';
 import { preprocess } from 'minna-ui';
@@ -60,10 +61,13 @@ export default {
     output: config.client.output(),
     plugins: [
       replace({
-        // @ts-expect-error
-        'process.browser': true,
-        'process.env.APP_VERSION': JSON.stringify(release),
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          // @ts-expect-error
+          'process.browser': true,
+          'process.env.APP_VERSION': JSON.stringify(release),
+          'process.env.NODE_ENV': JSON.stringify(mode),
+        },
       }),
       alias(aliasOpts),
       json(),
@@ -101,10 +105,13 @@ export default {
     output: config.server.output(),
     plugins: [
       replace({
-        // @ts-expect-error
-        'process.browser': false,
-        'process.env.APP_VERSION': JSON.stringify(release),
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          // @ts-expect-error
+          'process.browser': false,
+          'process.env.APP_VERSION': JSON.stringify(release),
+          'process.env.NODE_ENV': JSON.stringify(mode),
+        },
       }),
       alias(aliasOpts),
       json(),
@@ -145,10 +152,13 @@ export default {
     plugins: [
       resolve(),
       replace({
-        // @ts-expect-error
-        'process.browser': true,
-        'process.env.APP_VERSION': JSON.stringify(release),
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          // @ts-expect-error
+          'process.browser': true,
+          'process.env.APP_VERSION': JSON.stringify(release),
+          'process.env.NODE_ENV': JSON.stringify(mode),
+        },
       }),
       commonjs(),
       typescript(tsOpts),

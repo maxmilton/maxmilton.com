@@ -1,12 +1,11 @@
-// @ts-expect-error - no included types
 import send from '@polka/send';
-import { Req, Res } from '##/types';
+import type { Middleware } from 'polka';
 import getPosts from './_posts';
 
 const TIME_FIVE_MINUTES = 300000; // 5 * 60 * 1e3;
 let json: string;
 
-export async function get(_req: Req, res: Res): Promise<void> {
+export const get: Middleware = async (_req, res) => {
   if (!json || process.env.NODE_ENV !== 'production') {
     const posts = (await getPosts()).map((post) => ({
       metadata: post.metadata,
@@ -20,4 +19,4 @@ export async function get(_req: Req, res: Res): Promise<void> {
     'Cache-Control': `max-age=${TIME_FIVE_MINUTES}`,
     'Content-Type': 'application/json',
   });
-}
+};

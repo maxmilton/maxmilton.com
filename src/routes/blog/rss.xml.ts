@@ -1,6 +1,6 @@
-// @ts-expect-error - no included types
 import send from '@polka/send';
-import { PostItem, Req, Res } from '##/types';
+import type { Middleware } from 'polka';
+import type { PostItem } from '##/types';
 import getPosts from './_posts';
 
 const TIME_THIRTY_MINUTES = 1800000; // 30 * 60 * 1e3;
@@ -43,11 +43,11 @@ const rss = (posts: PostItem[]): string =>
     .replace(/[^\S]+</gm, '<')
     .trim();
 
-export async function get(_req: Req, res: Res): Promise<void> {
+export const get: Middleware = async (_req, res) => {
   const posts = await getPosts();
 
   send(res, 200, rss(posts), {
     'Cache-Control': `max-age=${TIME_THIRTY_MINUTES}`,
     'Content-Type': 'application/rss+xml',
   });
-}
+};

@@ -14,8 +14,8 @@ import remark2rehype from 'remark-rehype';
 // @ts-expect-error - no included types
 import vfile from 'to-vfile';
 import unified from 'unified';
-import { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
-import { MetaData, PostItem } from '##/types';
+import type { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
+import type { MetaData, PostItem } from '##/types';
 
 const CONTENT_DIRS = ['content/blog'];
 
