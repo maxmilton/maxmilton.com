@@ -1,6 +1,9 @@
 // @ts-nocheck
-/* eslint-disable no-restricted-globals, no-restricted-syntax, security/detect-non-literal-fs-filename */
+// /// <reference lib="webworker" />
+/* eslint-env serviceworker */
+/* eslint-disable no-restricted-globals, no-restricted-syntax, security/detect-non-literal-fs-filename, no-void */
 
+// @ts-expect-error - no included types
 import { files, shell, timestamp } from '@sapper/service-worker'; // eslint-disable-line import/no-extraneous-dependencies
 
 const ASSETS = `cache${timestamp}`;
@@ -26,10 +29,8 @@ self.addEventListener('activate', (event) => {
     caches.keys().then(async (keys) => {
       // delete old caches
       for (const key of keys) {
-        if (key !== ASSETS) {
-          // eslint-disable-next-line no-await-in-loop
-          await caches.delete(key);
-        }
+        // eslint-disable-next-line no-await-in-loop
+        if (key !== ASSETS) await caches.delete(key);
       }
 
       self.clients.claim();
@@ -41,13 +42,12 @@ self.addEventListener('activate', (event) => {
  * Fetch the asset from the network and store it in the cache.
  * Fall back to the cache if the user is offline.
  */
-async function fetchAndCache(request): Response {
+async function fetchAndCache(request): Promise<Response> {
   const cache = await caches.open(`offline${timestamp}`);
 
   try {
     const response = await fetch(request);
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    cache.put(request, response.clone());
+    void cache.put(request, response.clone());
     return response;
   } catch (err) {
     const response = await cache.match(request);
