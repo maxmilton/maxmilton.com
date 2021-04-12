@@ -4,7 +4,7 @@
     const data = await res.json();
 
     if (res.ok) {
-      return { posts: data, tag: params.slug }
+      return { posts: data, tag: params.slug };
     }
 
     this.error(res.status, data.message);
@@ -26,7 +26,12 @@
 
   {#each posts as post}
     <article class="post">
-      <a class="db" rel="prefetch" href="/blog/{post.slug}" title="Read the article">
+      <a
+        class="db"
+        rel="prefetch"
+        href="/blog/{post.slug}"
+        title="Read the article"
+      >
         <h2>{post.metadata.title}</h2>
         <p>{post.metadata.description}</p>
       </a>

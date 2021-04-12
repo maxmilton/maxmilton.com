@@ -4,7 +4,7 @@
     const data = await res.json();
 
     if (res.ok) {
-      return { post: data }
+      return { post: data };
     }
 
     this.error(res.status, data.message);
@@ -22,7 +22,9 @@
 
 <article class="con">
   <h1 id="{post.slug}" class="tc">{post.metadata.title}</h1>
-  <div class="tc mb4"><time datetime="{post.metadata.pubdate}">{post.metadata.date}</time></div>
+  <div class="tc mb4">
+    <time datetime="{post.metadata.pubdate}">{post.metadata.date}</time>
+  </div>
 
   {@html post.html}
 </article>

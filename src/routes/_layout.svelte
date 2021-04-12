@@ -31,9 +31,11 @@
 <Nav segment="{segment}" />
 
 <main>
-  <slot></slot>
+  <slot />
 </main>
 
 <footer class="footer tc">
-  <a href="mailto:max@wearegenki.com" class="big" title="Contact Max">&#129492;</a>
+  <a href="mailto:max@wearegenki.com" class="big" title="Contact Max">
+    &#129492;
+  </a>
 </footer>
