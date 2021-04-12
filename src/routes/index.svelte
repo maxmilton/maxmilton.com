@@ -12,7 +12,12 @@
 <svelte:head>
   <title>MaxMilton.com</title>
   <meta name="description" content="MaxMilton.com" />
-  <link rel="alternate" type="application/rss+xml" title="Max Milton's blog" href="/blog/rss.xml">
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Max Milton's blog"
+    href="/blog/rss.xml"
+  />
 </svelte:head>
 
 <header class="tc">
@@ -38,6 +43,10 @@
   <div>
     <h3>More</h3>
     <p><a href="/about">About me & contact info</a></p>
-    <p><a href="https://github.com/MaxMilton" target="_blank">My projects on Github</a></p>
+    <p>
+      <a href="https://github.com/MaxMilton" target="_blank">
+        My projects on Github
+      </a>
+    </p>
   </div>
 </div>

@@ -3,11 +3,9 @@
 import { promises as fs } from 'fs';
 import yaml from 'js-yaml';
 import path from 'path';
-// @ts-expect-error - no included types
 import raw from 'rehype-raw';
 // @ts-expect-error - no included types
 import shiki from 'rehype-shiki';
-// @ts-expect-error - no included types
 import _slug from 'rehype-slug';
 import stringify from 'rehype-stringify';
 import frontmatter from 'remark-frontmatter';
@@ -16,8 +14,8 @@ import remark2rehype from 'remark-rehype';
 // @ts-expect-error - no included types
 import vfile from 'to-vfile';
 import unified from 'unified';
-import { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
-import { MetaData, PostItem } from '##/types';
+import type { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
+import type { MetaData, PostItem } from '##/types';
 
 const CONTENT_DIRS = ['content/blog'];
 
@@ -33,8 +31,14 @@ const processor = unified()
   .use(remark2rehype, { allowDangerousHtml: true })
   .use(raw)
   .use(_slug)
-  .use(shiki, { theme: 'zeit', useBackground: true })
-  .use(stringify, { allowDangerousHtml: true });
+  .use(shiki, {
+    theme: 'zeit',
+    useBackground: true,
+  })
+  .use(stringify, {
+    allowDangerousCharacters: true,
+    allowDangerousHtml: true,
+  });
 
 export default async function getPosts(): Promise<PostItem[]> {
   if (!postItems) {
@@ -61,10 +65,24 @@ export default async function getPosts(): Promise<PostItem[]> {
         const ast = processor.parse(vfile.readSync(filePath)) as Parent;
         const metadata =
           ast.children[0].type === 'yaml'
-            ? (yaml.safeLoad(ast.children[0].value as string) as MetaData)
+            ? (yaml.load(ast.children[0].value as string) as MetaData)
             : ({} as MetaData);
         const result = await processor.run(ast);
         const html = processor.stringify(result);
+        // FIXME: Move this into a rehype plugin so it's code/pre aware
+        // // reduce multiple whitespace down to a single space
+        // .replace(/\s{2,}/gm, ' ')
+        // // convert remaining whitespace characters into a space
+        // .replace(/\s/gm, ' ')
+        // // remove whitespace between the most common safe tag combinations
+        // .replace(/<\/p> <p/gm, '</p><p')
+        // .replace(/<ul> <li>/gm, '<ul><li>')
+        // .replace(/<\/li> <\/ul>/gm, '</li></ul>')
+        // .replace(/<\/ul> <p/gm, '</ul><p')
+        // .replace(/<\/p> <ul/gm, '</p><ul')
+        // .replace(/<\/li> <li/gm, '</li><li')
+        // .replace(/<\/h([1-6])> <p/gm, '</h$1><p')
+        // .replace(/<\/p> <h([1-6])/gm, '</p><h$1');
 
         const [, pubdate, slug] = match;
         const dateFormat = new Intl.DateTimeFormat('en-AU', {

@@ -1,12 +1,12 @@
-// @ts-expect-error - no included types
 import send from '@polka/send';
-import { PostItem, Req, Res } from '##/types';
+import type { Middleware } from 'polka';
+import type { PostItem } from '##/types';
 import getPosts from './_posts';
 
 const TIME_FIVE_MINUTES = 300000; // 5 * 60 * 1e3;
 let lookup: Map<string, PostItem>;
 
-export async function get(req: Req, res: Res): Promise<void> {
+export const get: Middleware = async (req, res) => {
   if (!lookup || process.env.NODE_ENV !== 'production') {
     lookup = new Map<string, PostItem>();
     const posts = await getPosts();
@@ -15,7 +15,7 @@ export async function get(req: Req, res: Res): Promise<void> {
     });
   }
 
-  const post = lookup.get(req.params!.slug);
+  const post = lookup.get(req.params.slug);
 
   if (post) {
     res.setHeader('Cache-Control', `max-age=${TIME_FIVE_MINUTES}`);
@@ -23,4 +23,4 @@ export async function get(req: Req, res: Res): Promise<void> {
   } else {
     send(res, 404, { message: 'not found' });
   }
-}
+};

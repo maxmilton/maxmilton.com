@@ -5,7 +5,7 @@ tags:
   - Nutrition
 ---
 
-{{< img src="/img/simple-keto-meal-plan" type="jpg" alt="simple keto diet meal" >}}
+![simple keto diet meal](/img/simple-keto-meal-plan.jpg)
 
 Since I was writing a keto diet induction plan for myself anyway, I thought why not put in a little more effort and publish it for other people's benefit too! What you'll find bellow are my notes on becoming keto-adapted and a sample 14 day keto-induction meal plan.
 
@@ -39,7 +39,7 @@ Just so you know, this is vastly different from _ketoacidosis_, a potentially li
 - Controlled appetite
 - Highly effective weight loss
 
-{{< img src="/img/keto-pad-thai-in-bowl" type="jpg" alt="keto meal plan pad thai" >}}
+![keto meal plan pad thai](/img/keto-pad-thai-in-bowl.jpg)
 
 ## Tips
 
@@ -87,7 +87,7 @@ You should try to eat most of your fat from these common foods.
 - salmon
 - sardines
 
-{{< img src="/img/big-fry-pan-keto-meal-bacon-greens" type="jpg" alt="keto meal bacon and greens" >}}
+![keto meal bacon and greens](/img/big-fry-pan-keto-meal-bacon-greens.jpg)
 
 ## Meal Plan
 

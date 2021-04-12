@@ -1,5 +1,5 @@
-import * as sapper from '@sapper/server'; // eslint-disable-line import/no-extraneous-dependencies
 // @ts-expect-error - no included types
+import * as sapper from '@sapper/server'; // eslint-disable-line import/no-extraneous-dependencies
 import polka from 'polka';
 import sirv from 'sirv';
 import './css/main.css';
