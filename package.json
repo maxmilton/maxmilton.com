@@ -4,8 +4,8 @@
   "private": true,
   "description": "My personal blog",
   "license": "MIT",
-  "repository": "https://github.com/MaxMilton/MaxMilton.com",
-  "author": "Max Milton <max@wearegenki.com>",
+  "repository": "maxmilton/maxmilton.com",
+  "author": "Max Milton <max@happycode.ltd>",
   "homepage": "https://maxmilton.com",
   "scripts": {
     "_run": "yarn export && sirv __sapper__/export --dev --single --cors",
