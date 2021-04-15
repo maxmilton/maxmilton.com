@@ -89,8 +89,8 @@
   </form>
 
   <p class="mt4">
-    Alternatively, you can send an email to <a href="mailto:max@wearegenki.com">
-      max@wearegenki.com
+    Alternatively, you can send an email to <a href="mailto:max@happycode.ltd">
+      max@happycode.ltd
     </a>
     .
   </p>

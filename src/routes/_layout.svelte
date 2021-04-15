@@ -35,7 +35,7 @@
 </main>
 
 <footer class="footer tc">
-  <a href="mailto:max@wearegenki.com" class="big" title="Contact Max">
+  <a href="mailto:max@happycode.ltd" class="big" title="Contact Max">
     &#129492;
   </a>
 </footer>
