@@ -16,9 +16,9 @@
   }
 
   onMount(() => {
-    ga = new GAnalytics('UA-64694403-1', {
+    ga = new GAnalytics('G-QM3GJ5WTZ1', {
       aid: 1,
-      an: 'maxmilton.com',
+      an: 'MaxMilton.com',
       av: process.env.APP_VERSION,
     });
 
