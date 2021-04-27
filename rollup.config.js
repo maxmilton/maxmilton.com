@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
@@ -82,8 +84,8 @@ export default {
         preprocess,
       }),
       url({
-        sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
         publicPath: '/client/',
+        sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
       }),
       !dev && purgecss(purgecssOpts),
       resolve({
@@ -94,14 +96,13 @@ export default {
       typescript(tsOpts),
       !dev && terser({ module: true }),
     ],
-    preserveEntrySignatures: false,
     onwarn,
+    preserveEntrySignatures: false,
   },
 
   server: {
     // input: config.server.input(),
     input: { server: config.server.input().server.replace(/\.js$/, '.ts') },
-    onwarn,
     output: config.server.output(),
     plugins: [
       replace({
@@ -127,9 +128,9 @@ export default {
         preprocess,
       }),
       url({
-        sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
-        publicPath: '/client/',
         emitFiles: false, // already emitted by client build
+        publicPath: '/client/',
+        sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
       }),
       !dev && purgecss(purgecssOpts),
       resolve({
@@ -142,12 +143,12 @@ export default {
       'rehype-shiki',
       builtinModules,
     ),
+    onwarn,
     preserveEntrySignatures: 'strict',
   },
 
   serviceworker: {
     input: config.serviceworker.input().replace(/\.js$/, '.ts'),
-    onwarn,
     output: config.serviceworker.output(),
     plugins: [
       resolve(),
@@ -165,5 +166,6 @@ export default {
       !dev && terser(),
     ],
     preserveEntrySignatures: false,
+    onwarn,
   },
 };
