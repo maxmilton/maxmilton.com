@@ -165,7 +165,7 @@ export default {
       typescript(tsOpts),
       !dev && terser(),
     ],
-    preserveEntrySignatures: false,
     onwarn,
+    preserveEntrySignatures: false,
   },
 };
