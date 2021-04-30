@@ -15,7 +15,7 @@ jobs:
         run: |
           curl -Lo ./cc-test-reporter https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
           chmod +x ./cc-test-reporter
-          ./cc-test-reporter format-coverage -t lcov -o test/coverage/codeclimate.json coverage/lcov.info
+          ./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.json test/coverage/lcov.info
           ./cc-test-reporter upload-coverage
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
