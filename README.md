@@ -16,4 +16,4 @@ MaxMilton.com is an MIT licensed open source project. See [LICENCE](./LICENCE).
 
 ---
 
-© 2019 [Max Milton](https://maxmilton.com)
+© 2021 [Max Milton](https://maxmilton.com)
