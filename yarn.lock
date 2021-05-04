@@ -8022,7 +8022,15 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-to-vfile@6.1.0, to-vfile@^6.0.0:
+to-vfile@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/to-vfile/-/to-vfile-7.0.0.tgz#c05f8cfcf36df24adab0f71cb3b07e275c78d6b3"
+  integrity sha512-l2/CqmSVwXZhzyWsxsllCi/JQr9oFO4hKNG7Y1dk9nhHQnO/2hU94wxxmTehMvQKA4z+EcjSyfWJFR+Ybhy4cA==
+  dependencies:
+    is-buffer "^2.0.0"
+    vfile "^5.0.0"
+
+to-vfile@^6.0.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/to-vfile/-/to-vfile-6.1.0.tgz#5f7a3f65813c2c4e34ee1f7643a5646344627699"
   integrity sha512-BxX8EkCxOAZe+D/ToHdDsJcVI4HqQfmw0tCkp31zf3dNP/XWIAjU4CmeuSwsSoOzOTqHPOL0KUzyZqJplkD0Qw==
@@ -8368,6 +8376,13 @@ unist-util-stringify-position@^2.0.0:
   dependencies:
     "@types/unist" "^2.0.2"
 
+unist-util-stringify-position@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-3.0.0.tgz#d517d2883d74d0daa0b565adc3d10a02b4a8cde9"
+  integrity sha512-SdfAl8fsDclywZpfMDTVDxA2V7LjtRDTOFd44wUJamgl6OlVngsqWjxvermMYf60elWHbxhuRCZml7AnuXCaSA==
+  dependencies:
+    "@types/unist" "^2.0.0"
+
 unist-util-visit-parents@^2.0.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-2.1.2.tgz#25e43e55312166f3348cae6743588781d112c1e9"
@@ -8525,6 +8540,14 @@ vfile-message@^2.0.0:
     "@types/unist" "^2.0.0"
     unist-util-stringify-position "^2.0.0"
 
+vfile-message@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vfile-message/-/vfile-message-3.0.0.tgz#1a9aa8b5c2ae3ba7b9d7ec1abd0b54c86be8f0ec"
+  integrity sha512-inWuts+N+7QSWL1nVCcHlPCtSnihal/E36M2N0M5Xs8smyI5M6883G4spd5W7YE/Rno9yWgGr3z7avsdVGGSjw==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-stringify-position "^3.0.0"
+
 vfile-reporter@^6.0.0:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/vfile-reporter/-/vfile-reporter-6.0.2.tgz#cbddaea2eec560f27574ce7b7b269822c191a676"
@@ -8566,6 +8589,16 @@ vfile@^4.0.0:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
+
+vfile@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/vfile/-/vfile-5.0.0.tgz#0a7d36198069c8cfcb8ff77cb2252279c65bd745"
+  integrity sha512-7RQI2eGterrF7M0c3bOCS49bpnrt1t+f/rpDPyBEpuLFy4jzUiWkftgjTAy/aO/RGxJys79NX1qslU35gL5xFw==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    is-buffer "^2.0.0"
+    unist-util-stringify-position "^3.0.0"
+    vfile-message "^3.0.0"
 
 "vscode-textmate@https://github.com/octref/vscode-textmate":
   version "4.0.1"
