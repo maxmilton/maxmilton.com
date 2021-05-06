@@ -11,8 +11,7 @@ import stringify from 'rehype-stringify';
 import frontmatter from 'remark-frontmatter';
 import parse from 'remark-parse';
 import remark2rehype from 'remark-rehype';
-// @ts-expect-error - no included types
-import vfile from 'to-vfile';
+import { toVFile } from 'to-vfile';
 import unified from 'unified';
 import type { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
 import type { MetaData, PostItem } from '##/types';
@@ -62,7 +61,7 @@ export default async function getPosts(): Promise<PostItem[]> {
         if (!match) throw new Error(`Invalid filename '${file}'`);
 
         const filePath = `${dir}/${file}`;
-        const ast = processor.parse(vfile.readSync(filePath)) as Parent;
+        const ast = processor.parse(toVFile.readSync(filePath)) as Parent;
         const metadata =
           ast.children[0].type === 'yaml'
             ? (yaml.load(ast.children[0].value as string) as MetaData)
