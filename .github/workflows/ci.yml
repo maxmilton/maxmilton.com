@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: 16
       - run: yarn install --frozen-lockfile
-      - run: yarn run build
+      - run: yarn run export
       - run: yarn run test-ci
       - name: Report coverage
         run: |
