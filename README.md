@@ -1,9 +1,9 @@
-[![Build status](https://img.shields.io/github/workflow/status/MaxMilton/MaxMilton.com/ci)](https://github.com/MaxMilton/MaxMilton.com/actions)
-[![Coverage status](https://img.shields.io/codeclimate/coverage/MaxMilton/MaxMilton.com)](https://codeclimate.com/github/MaxMilton/MaxMilton.com)
-[![package.json version](https://img.shields.io/github/package-json/v/maxmilton/maxmilton.com)](https://github.com/MaxMilton/MaxMilton.com/blob/master/package.json)
-[![Licence](https://img.shields.io/github/license/MaxMilton/MaxMilton.com)](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE)
+[![Build status](https://img.shields.io/github/workflow/status/MaxMilton/maxmilton.com/ci)](https://github.com/MaxMilton/maxmilton.com/actions)
+[![Coverage status](https://img.shields.io/codeclimate/coverage/MaxMilton/maxmilton.com)](https://codeclimate.com/github/MaxMilton/maxmilton.com)
+[![package.json version](https://img.shields.io/github/package-json/v/maxmilton/maxmilton.com)](https://github.com/MaxMilton/maxmilton.com/blob/master/package.json)
+[![Licence](https://img.shields.io/github/license/MaxMilton/maxmilton.com)](https://github.com/MaxMilton/maxmilton.com/blob/master/LICENCE)
 
-# MaxMilton.com
+# maxmilton.com
 
 My personal blog.
 
@@ -20,7 +20,7 @@ Tech highlights from the current version:
 
 ## Licence
 
-`MaxMilton.com` is an MIT licensed open source project. See [LICENCE](https://github.com/MaxMilton/MaxMilton.com/blob/master/README.md).
+`maxmilton.com` is an MIT licensed open source project. See [LICENCE](https://github.com/MaxMilton/maxmilton.com/blob/master/README.md).
 
 ---
 
