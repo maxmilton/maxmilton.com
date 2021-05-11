@@ -65,6 +65,6 @@
   </p>
 
   <p>
-    This website's code itself is an <a href="https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE" target="_blank" rel="nofollow">MIT licensed</a> open source project. See the code at <a href="https://github.com/MaxMilton/MaxMilton.com" target="_blank" rel="nofollow">github.com/MaxMilton/MaxMilton.com</a>.
+    This website's code itself is an <a href="https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE" target="_blank" rel="nofollow">MIT licensed</a> open source project. See the code at <a href="https://github.com/MaxMilton/maxmilton.com" target="_blank" rel="nofollow">github.com/MaxMilton/maxmilton.com</a>.
   </p>
 </div>
