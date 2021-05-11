@@ -22,14 +22,14 @@
 
 <header class="tc">
   <h1 class="headline">Max Milton</h1>
-  <h2>Write the codes.</h2>
-  <p class="lead ttu">&#9829; web tech, esoteric platforms, & experiments</p>
+  <h2>Making fun things with web tech.</h2>
+  <p class="lead">Hack. Learn. Fix. Explore.</p>
 </header>
 
 <div class="con dg ns-x3">
   <div class="ns-w2">
     <h3>Latest blog posts</h3>
-    <ul>
+    <ul class="ml-4">
       {#each posts.slice(0, 6) as post}
         <li class="post">
           <a rel="prefetch" href="/blog/{post.slug}" title="Read the article">
@@ -40,13 +40,9 @@
     </ul>
     <p><a href="/blog">View all posts</a></p>
   </div>
-  <div>
+  <div class="pl4 wsn">
     <h3>More</h3>
     <p><a href="/about">About me & contact info</a></p>
-    <p>
-      <a href="https://github.com/MaxMilton" target="_blank">
-        My projects on Github
-      </a>
-    </p>
+    <p><a href="https://github.com/MaxMilton" target="_blank">My projects on Github</a></p>
   </div>
 </div>
