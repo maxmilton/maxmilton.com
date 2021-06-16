@@ -7830,10 +7830,10 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-to-vfile@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/to-vfile/-/to-vfile-7.0.0.tgz#c05f8cfcf36df24adab0f71cb3b07e275c78d6b3"
-  integrity sha512-l2/CqmSVwXZhzyWsxsllCi/JQr9oFO4hKNG7Y1dk9nhHQnO/2hU94wxxmTehMvQKA4z+EcjSyfWJFR+Ybhy4cA==
+to-vfile@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/to-vfile/-/to-vfile-7.1.0.tgz#44c26b7a5c1f325550e814ff28ad3dd00f6e1acf"
+  integrity sha512-t1c42ASuWo39ddjh2R+hX5+kbDcc2CmbhaTSJkVavDYMjnFkpq0L4LeF+rcPoDdieGUsFaivSSkmwuFpYzhBZw==
   dependencies:
     is-buffer "^2.0.0"
     vfile "^5.0.0"
