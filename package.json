@@ -46,7 +46,7 @@
     "minna-ui": "0.36.1-next.57",
     "postcss": "8.3.4",
     "postcss-extend-rule": "3.0.0",
-    "postcss-scss": "3.0.5",
+    "postcss-scss": "4.0.0",
     "prettier": "2.3.1",
     "rehype-raw": "5.1.0",
     "rehype-shiki": "0.0.9",
