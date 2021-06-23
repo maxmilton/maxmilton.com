@@ -44,7 +44,7 @@
     "locate-character": "2.0.5",
     "minna-tools": "0.36.1-next.57",
     "minna-ui": "0.36.1-next.57",
-    "postcss": "8.3.4",
+    "postcss": "8.3.5",
     "postcss-extend-rule": "3.0.0",
     "postcss-scss": "4.0.0",
     "prettier": "2.3.1",
