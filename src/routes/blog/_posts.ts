@@ -12,7 +12,7 @@ import frontmatter from 'remark-frontmatter';
 import parse from 'remark-parse';
 import remark2rehype from 'remark-rehype';
 import { toVFile } from 'to-vfile';
-import unified from 'unified';
+import { unified } from 'unified';
 import type { Parent } from 'unist'; // eslint-disable-line import/no-unresolved
 import type { MetaData, PostItem } from '##/types';
 
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
   CONTENT_DIRS.push('content/wip');
 }
 
-let postItems: PostItem[];
+let postItems: undefined | PostItem[];
 
 const processor = unified()
   .use(parse)
@@ -62,10 +62,12 @@ export default async function getPosts(): Promise<PostItem[]> {
 
         const filePath = `${dir}/${file}`;
         const ast = processor.parse(toVFile.readSync(filePath)) as Parent;
-        const metadata =
+        const metadata = (
           ast.children[0].type === 'yaml'
-            ? (yaml.load(ast.children[0].value as string) as MetaData)
-            : ({} as MetaData);
+            ? // @ts-expect-error - official types are wrong, "value" does exist
+              yaml.load(ast.children[0].value)
+            : {}
+        ) as MetaData;
         const result = await processor.run(ast);
         const html = processor.stringify(result);
         // FIXME: Move this into a rehype plugin so it's code/pre aware
