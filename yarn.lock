@@ -750,6 +750,11 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
   integrity sha512-15spi3V28QdevleWBNXE4pIls3nFZmBbUGrW9IVPwiQczuSb9n76TCB4bsk8TSel+I1OkHEdPhu5QKMfY6rQHA==
 
+"@polka/url@^1.0.0-next.21":
+  version "1.0.0-next.21"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
+  integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
+
 "@rollup/plugin-alias@3.1.4":
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-3.1.4.tgz#47774f4ff0eab5937f7acb392cf2b89921f03b7d"
@@ -5472,12 +5477,12 @@ pluralize@^8.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
-polka@1.0.0-next.15:
-  version "1.0.0-next.15"
-  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.15.tgz#04190847b4bc598261755a29c51872ea8259cc77"
-  integrity sha512-zBCZO40+USkSj0GDHMqufthqk4TIRc9xVGd50LbMvYNEwGHK8dZczLBQtw9pPHBM+i/Xg7ed7+c+r6J68XkWLg==
+polka@1.0.0-next.22:
+  version "1.0.0-next.22"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.22.tgz#3c25659a401608cf437732f292baf481dc6ec16e"
+  integrity sha512-a7tsZy5gFbJr0aUltZS97xCkbPglXuD67AMvTyZX7BTDBH384FWf0ZQF6rPvdutSxnO1vUlXM2zSLf5tCKk5RA==
   dependencies:
-    "@polka/url" "^1.0.0-next.15"
+    "@polka/url" "^1.0.0-next.21"
     trouter "^3.1.0"
 
 posix-character-classes@^0.1.0:
@@ -8399,10 +8404,6 @@ vfile@^5.0.0:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
-
-"vscode-textmate@git+https://github.com/octref/vscode-textmate.git":
-  version "4.0.1"
-  resolved "git+https://github.com/octref/vscode-textmate.git#e65aabe2227febda7beaad31dd0fca1228c5ddf3"
 
 "vscode-textmate@https://github.com/octref/vscode-textmate":
   version "4.0.1"
