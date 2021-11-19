@@ -48,7 +48,7 @@
     "postcss-extend-rule": "3.0.0",
     "postcss-scss": "4.0.0",
     "prettier": "2.3.2",
-    "rehype-raw": "5.1.0",
+    "rehype-raw": "6.1.0",
     "rehype-shiki": "0.0.9",
     "rehype-slug": "4.0.1",
     "rehype-stringify": "8.0.0",
