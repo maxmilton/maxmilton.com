@@ -51,7 +51,7 @@
     "rehype-raw": "5.1.0",
     "rehype-shiki": "0.0.9",
     "rehype-slug": "4.0.1",
-    "rehype-stringify": "8.0.0",
+    "rehype-stringify": "9.0.2",
     "remark-cli": "9.0.0",
     "remark-frontmatter": "3.0.0",
     "remark-parse": "9.0.0",
