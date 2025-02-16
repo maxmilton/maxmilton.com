@@ -5,7 +5,7 @@
   "description": "My personal blog",
   "license": "MIT",
   "repository": "maxmilton/maxmilton.com",
-  "author": "Max Milton <max@happycode.ltd>",
+  "author": "Max Milton <max@happyhackers.xyz>",
   "homepage": "https://maxmilton.com",
   "scripts": {
     "_run": "yarn export && sirv __sapper__/export --dev --single --cors",
